@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .progress-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: radial-gradient(
+            closest-side,
+            white 79%,
+            transparent 80% 100%
+          ),
+          conic-gradient(hotpink 75%, pink 0);
+      }
+
+      .progress-bar::before {
+        content: '75%';
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-bar">
+      <progress
+        value="75"
+        min="0"
+        max="100"
+        style="visibility: hidden; height: 0; width: 0"
+      >
+        75%
+      </progress>
+    </div>
+  </body>
+</html>
