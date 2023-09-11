@@ -52,11 +52,14 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    600: {
+    360: {
       slidesPerView: 2,
     },
+    640: {
+      slidesPerView: 3,
+    },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
   },
 });
