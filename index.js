@@ -45,21 +45,24 @@ mixer.filter('*');
 // * SWIPER JS - Testimonials Section
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 10,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
 
   breakpoints: {
-    360: {
-      slidesPerView: 1,
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30,
     },
     640: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 5,
+      slidesPerView: 4,
+      spaceBetween: 40,
     },
   },
 });
