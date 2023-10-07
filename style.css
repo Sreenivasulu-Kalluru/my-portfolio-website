@@ -768,6 +768,8 @@ li.mixitup-control-active {
 
 .swiper-pagination-bullet {
   background: var(--color-primary);
+  position: relative;
+  top: -50px;
 }
 
 /* * CONTACT */
