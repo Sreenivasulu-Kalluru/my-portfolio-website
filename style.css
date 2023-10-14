@@ -1079,10 +1079,6 @@ footer {
     gap: 1rem;
   }
 
-  .project__cta {
-    justify-content: center;
-  }
-
   .swiper {
     width: var(--container-width-sm);
   }
