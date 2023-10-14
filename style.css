@@ -1079,10 +1079,6 @@ footer {
     gap: 1rem;
   }
 
-  .project {
-    text-align: center;
-  }
-
   .project__cta {
     justify-content: center;
   }
