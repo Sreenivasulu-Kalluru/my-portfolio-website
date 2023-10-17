@@ -247,6 +247,7 @@ nav {
 
 .nav__menu a:hover {
   color: var(--color-primary);
+  font-weight: 500;
 }
 
 .nav__toggle-open,
