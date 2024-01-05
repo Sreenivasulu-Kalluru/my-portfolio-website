@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="assets/—Pngtree—vs logo transparant background_5992961.png"
-      type="image/png"
-    />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/png" />
+
+    <link rel="manifest" href="manifest.json" />
+
     <title>Vasu K</title>
     <!-- * ICONSCOUT CDN -->
     <link
@@ -1077,6 +1076,11 @@
       </div>
     </footer>
 
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./mixitup-v3/dist/mixitup.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
