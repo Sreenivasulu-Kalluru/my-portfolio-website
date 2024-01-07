@@ -66,15 +66,14 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background: var(--color-primary);
+  background: transparent;
+  border: 2px solid var(--color-primary);
   transition: var(--transition);
 }
 
 ::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:active {
-  /* background: orangered; */
-  background: transparent;
-  border: 2px solid orangered;
+  background: var(--color-primary);
 }
 
 html {
