@@ -54,6 +54,12 @@
   --color-gray-900: hsl(var(--primary-hue), 0%, 100%);
 
   --color-nav-bg: hsla(var(--primary-hue), 0%, 0%, 0.4);
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    background-color: #fff;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -249,11 +255,6 @@ nav {
   font-weight: 500;
 }
 
-.nav__toggle-open,
-.nav__toggle-close {
-  display: none;
-}
-
 .nav__theme-btn {
   color: var(--color-gray-900);
   background: transparent;
@@ -274,10 +275,6 @@ header {
   place-items: center;
   min-height: 100vh;
 }
-
-/* .header__container {
-  margin-top: 3rem;
-} */
 
 .header__container .intro {
   text-align: center;
@@ -568,7 +565,6 @@ li.mixitup-control-active {
 
 .swiper-wrapper {
   margin-top: 4rem;
-  /* padding-bottom: 4rem; */
   height: fit-content;
 }
 
@@ -756,8 +752,60 @@ footer {
     width: var(--container-width-sm);
   }
 
+  /* * Hamburger Menu */
+  #menu-btn {
+    background-color: transparent;
+    margin-top: 7px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+
+  .hamburger-bottom {
+    transform: translateY(14px);
+  }
+
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+
+  .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+
+  .open .hamburger-middle {
+    display: none;
+  }
+
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
+
   .nav__menu {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 3.8rem;
     flex-direction: column;
@@ -765,6 +813,10 @@ footer {
     width: fit-content;
     display: none;
     perspective: 250px;
+  }
+
+  .nav-open {
+    display: flex;
   }
 
   .nav__menu li {

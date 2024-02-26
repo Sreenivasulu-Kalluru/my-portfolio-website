@@ -1,7 +1,6 @@
 // * SERVICES TOGGLE
 const servicesButtons = document.querySelectorAll('.service__item');
 const serviceDetails = document.querySelector('.services__right');
-// console.log(servicesButtons);
 
 const getService = (category) => {
   const details = servicesData.find((item) => item.category === category);
@@ -24,7 +23,6 @@ servicesButtons.forEach((item) => {
   item.addEventListener('click', () => {
     removeActiveClass();
     const serviceClass = item.classList[1];
-    // console.log(serviceClass);
     getService(serviceClass);
     item.classList.add('active');
   });
@@ -68,31 +66,23 @@ const swiper = new Swiper('.swiper', {
 });
 
 // * NAV TOGGLE
+const btn = document.getElementById('menu-btn');
 const navMenu = document.querySelector('.nav__menu');
-const navOpenBtn = document.querySelector('.nav__toggle-open');
-const navCloseBtn = document.querySelector('.nav__toggle-close');
 
-const openNavHandler = () => {
-  navMenu.style.display = 'flex';
-  navOpenBtn.style.display = 'none';
-  navCloseBtn.style.display = 'inline-block';
-};
-
-const closeNavHandler = () => {
-  navMenu.style.display = 'none';
-  navOpenBtn.style.display = 'inline-block';
-  navCloseBtn.style.display = 'none';
-};
-
-navOpenBtn.addEventListener('click', openNavHandler);
-navCloseBtn.addEventListener('click', closeNavHandler);
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  navMenu.classList.toggle('nav-open');
+});
 
 // * Close Nav Menu on click of nav link on small screens i.e, < 780px
 const navItems = navMenu.querySelectorAll('a');
 
 if (window.innerWidth < 768) {
   navItems.forEach((item) => {
-    item.addEventListener('click', closeNavHandler);
+    item.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-open');
+      btn.classList.toggle('open');
+    });
   });
 }
 
