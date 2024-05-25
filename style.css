@@ -308,7 +308,7 @@ header {
   margin: 0.8rem 0.2rem;
 }
 
-.header-cta {
+.header__cta {
   display: flex;
   gap: 1.5rem;
   align-items: center;
