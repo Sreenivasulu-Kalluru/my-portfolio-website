@@ -65,6 +65,18 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+// * NAVBAR BACKGROUND CHANGE ON-SCROLL
+// Navigation background on scroll
+window.addEventListener('scroll', function () {
+  const navbar = document.querySelector('.navbar');
+
+  if (window.scrollY > 0) {
+    navbar.classList.add('navbar--scroll');
+  } else {
+    navbar.classList.remove('navbar--scroll');
+  }
+});
+
 // * NAV TOGGLE
 const btn = document.getElementById('menu-btn');
 const navMenu = document.querySelector('.nav__menu');

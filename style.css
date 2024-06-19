@@ -209,7 +209,8 @@ section:nth-child(odd) {
 /* * NAVBAR */
 nav {
   background: var(--color-nav-bg);
-  border-bottom: 1px solid var(--color-gray-300);
+  border-bottom: 1px solid transparent;
+  transition: color 0.5s ease-in-out;
   display: grid;
   place-items: center;
   height: 3.8rem;
@@ -217,12 +218,18 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  backdrop-filter: blur(15px);
+  /* backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   -moz-backdrop-filter: blur(15px);
   -o-backdrop-filter: blur(15px);
-  -ms-backdrop-filter: blur(15px);
+  -ms-backdrop-filter: blur(15px); */
   z-index: 10;
+}
+
+.navbar.navbar--scroll {
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-gray-300);
 }
 
 .nav__container {
