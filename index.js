@@ -107,7 +107,7 @@ themeBtn.addEventListener('click', () => {
     bodyClass = 'dark';
     document.body.className = bodyClass;
     // * change toggle icon
-    themeBtn.innerHTML = '<i class="uil uil-sun"></i>';
+    themeBtn.innerHTML = '<i class="uil uil-sun" title="Light"></i>';
     // * save theme to local storage
     // window.localStorage.setItem('theme', bodyClass);
   } else {
