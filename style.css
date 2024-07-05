@@ -208,7 +208,7 @@ section:nth-child(odd) {
 
 /* * NAVBAR */
 nav {
-  background: var(--color-nav-bg);
+  /* background: var(--color-nav-bg); */
   border-bottom: 1px solid transparent;
   transition: color 0.5s ease-in-out;
   display: grid;
