@@ -1,1187 +1,325 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="keywords" content="Vasu, VasuK24, Sreenivasulu-Kalluru" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasu K | Full Stack Developer | Portfolio</title>
+
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Web Developer, Frontend Developer, JavaScript Developer, React Developer, Full Stack Developer, MERN Stack Developer"
+      content="Portfolio of Vasu K, a Full Stack Developer specializing in building exceptional digital experiences with modern web technologies."
+    />
+    <meta
+      name="keywords"
+      content="Vasu K, Full Stack Developer, MERN Stack, Web Developer, Portfolio, React, Node.js"
     />
     <meta name="author" content="Vasu K" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/png" />
 
-    <link rel="manifest" href="manifest.json" />
+    <!-- Open Graph / Social Labels -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vasu K | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Explore the portfolio of Vasu K, featuring modern web development projects and digital experiences."
+    />
+    <meta property="og:image" content="./assets/images/og-preview.png" />
 
-    <title>Vasu K | Web Developer</title>
-    <!-- * ICONSCOUT CDN -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vasu K | Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Explore my latest web development work and skills."
+    />
+    <meta name="twitter:image" content="./assets/images/og-preview.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
-    <!-- * FONT AWESOME ICONS -->
     <script
       src="https://kit.fontawesome.com/118f9e9755.js"
       crossorigin="anonymous"
     ></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- * GOOGLE FONTS (POPPINS) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- * GOOGLE FONTS (OUTFIT) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- * GOOGLE FONTS(PATTAYA) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
-      rel="stylesheet"
-    />
-    <!-- * SWIPER JS -->
+    <!-- Swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <!-- * ANIMATE ON SCROLL (AOS) -->
+
+    <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- ********************* -->
+    <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
 
-    <!-- ******************* -->
-    <nav class="navbar">
-      <div class="container nav__container">
-        <a href="#" class="nav__logo">
-          <!-- <img src="./assets/logo.png" alt="Navbar Logo" /> -->
-          VASU
-        </a>
-        <ul class="nav__menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Tech Stack</a></li>
-          <!-- <li><a href="#contact">Contact</a></li> -->
-        </ul>
-        <div class="nav__buttons">
-          <button class="nav__theme-btn">
-            <i class="uil uil-moon" title="Dark"></i>
-          </button>
-
-          <button id="menu-btn" class="hamburger">
-            <span class="hamburger-top"></span>
-            <span class="hamburger-middle"></span>
-            <span class="hamburger-bottom"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-    <!-- * END OF NAV SECTION-->
-
-    <header>
-      <div class="container header__container">
-        <h4 class="intro" data-aos="fade-up" data-aos-delay="700">
-          Hey There! I'm <span>Vasu</span>
-        </h4>
-        <h1 class="typewriter-text" data-aos="fade-up" data-aos-delay="900">
-          <span
-            class="txt-type"
-            data-wait="3000"
-            data-words='["Web Developer", "Frontend Developer", "Full Stack Developer"]'
-          ></span>
-        </h1>
-        <article class="article header__content" data-aos="fade-in">
-          <h4>And, I would love to</h4>
-          <h1>
-            Transform your Ideas into <br />
-            Digital Experiences.
-          </h1>
-          <p>
-            I am passionate about translating complex ideas into visually
-            appealing and high-performance solutions. From developing modern
-            user interfaces to ensuring mobile responsiveness, I strive to
-            deliver exceptional web experiences that meet both client and user
-            needs.
-          </p>
-          <!-- <div class="header__cta">
-            <a href="#contact" class="btn primary">Hire Me!</a>
-            <a href="#projects" class="btn">Portfolio</a>
-          </div> -->
-        </article>
-        <ul class="header__socials">
-          <li title="LinkedIn">
-            <a href="https://www.linkedin.com/in/vasuk24/" target="_blank"
-              ><i class="uil uil-linkedin"></i
-            ></a>
-          </li>
-          <li title="GitHub">
-            <a href="https://github.com/Sreenivasulu-Kalluru" target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </li>
-          <li title="Hashnode">
-            <a href="https://hashnode.com/@VasuK24" target="_blank"
-              ><i class="fa-brands fa-hashnode"></i
-            ></a>
-          </li>
-          <li title="Instagram">
-            <a href="https://www.instagram.com/iam.vs24/" target="_blank"
-              ><i class="uil uil-instagram"></i
-            ></a>
-          </li>
-        </ul>
+    <!-- Header / Hero -->
+    <header class="container">
+      <h4 class="text-gradient reveal-text"><span>HELLO, I'M VASU</span></h4>
+      <h1 class="hero-title reveal-text reveal-delay-1">
+        <span
+          >Transforming Ideas into <br />
+          <span class="text-gradient">Digital Experiences</span></span
+        >
+      </h1>
+      <p class="hero-subtitle reveal-text reveal-delay-2">
+        <span
+          >Full Stack Developer specializing in building exceptional digital
+          experiences. Currently focused on accessible, human-centered
+          products.</span
+        >
+      </p>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <a href="#projects" class="btn"
+          >View Work <i class="uil uil-arrow-right"></i
+        ></a>
+        <a href="#contact" class="btn btn-outline" style="margin-left: 1rem"
+          >Contact Me</a
+        >
       </div>
     </header>
-    <!-- * END OF HEADER SECTION -->
 
-    <section class="about" id="about">
-      <div class="container about__container">
-        <div class="about__image">
-          <img src="./assets/programmer.png" alt="About Image" />
-        </div>
-        <div class="about__details" data-aos="fade-in" data-aos-delay="300">
-          <h1>About Me!</h1>
-          <div class="about__cards">
-            <article class="about__card">
-              <i class="uil uil-award-alt"></i>
-              <h4>Experience</h4>
-              <small>0+ years</small>
-            </article>
-            <article class="about__card">
-              <i class="uil uil-swatchbook"></i>
-              <h4>Projects</h4>
-              <small>20+ completed</small>
-            </article>
+    <!-- Bento Grid Section -->
+    <section id="about" class="container bento-grid">
+      <!-- About Card (Large) -->
+      <article class="glass-card col-span-8" data-aos="fade-up">
+        <h3><i class="uil uil-user"></i> About Me</h3>
+        <p style="margin-top: 1rem">
+          I am a skilled MERN stack developer with a passion for crafting
+          intuitive, responsive, and dynamic web applications. Specializing in
+          front-end development, I combine expertise in React.js with robust
+          back-end experience in Node.js, Express, and MongoDB.
+        </p>
+        <div style="margin-top: 2rem; display: flex; gap: 2rem">
+          <div>
+            <h2 class="text-gradient">20+</h2>
+            <small>Projects Completed</small>
           </div>
-          <p>
-            I am a skilled MERN stack developer with a passion for crafting
-            intuitive, responsive, and dynamic web applications. Specializing in
-            front-end development, I combine expertise in React.js with robust
-            back-end experience in Node.js, Express, and MongoDB. My goal is to
-            create seamless user experiences through clean, efficient code and
-            modern design principles.
-          </p>
-
-          <p>
-            With a focus on delivering visually appealing interfaces, I leverage
-            technologies such as JavaScript, HTML5, CSS3, and React to build
-            scalable, maintainable front-end architectures. Whether it's
-            enhancing performance, ensuring mobile responsiveness, or optimizing
-            UX, I strive to create applications that are both user-friendly and
-            high-performing.
-          </p>
-          <!-- <a
-            href="./assets/Frontend.pdf"
-            class="btn primary"
-            download
-            target="_blank"
-            >Download CV <i class="uil uil-import"></i
-          ></a> -->
+          <div>
+            <h2 class="text-gradient">1+</h2>
+            <small>Years Experience</small>
+          </div>
         </div>
-      </div>
-    </section>
-    <!-- * END OF ABOUT SECTION -->
+      </article>
 
-    <section class="services" id="services">
-      <h1>Services</h1>
-      <p>Services I offer</p>
-      <div class="container services__container">
-        <ul class="services__left">
-          <li class="service__item frontend active">
-            <span><i class="uil uil-desktop"></i></span>
-            <div>
-              <h3>Frontend</h3>
-              <p>20+ Projects</p>
-            </div>
+      <!-- Services / Focus (Side) -->
+      <article
+        class="glass-card col-span-4"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h3><i class="uil uil-layer-group"></i> Focus</h3>
+        <ul
+          style="
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          "
+        >
+          <li
+            class="glass-card"
+            style="
+              padding: 1rem;
+              border: none;
+              background: rgba(255, 255, 255, 0.03);
+            "
+          >
+            <i class="uil uil-desktop text-gradient"></i> Frontend Dev
           </li>
-          <li class="service__item backend">
-            <span><i class="uil uil-server"></i></span>
-            <div>
-              <h3>Backend</h3>
-              <p>2 Projects</p>
-            </div>
+          <li
+            class="glass-card"
+            style="
+              padding: 1rem;
+              border: none;
+              background: rgba(255, 255, 255, 0.03);
+            "
+          >
+            <i class="uil uil-server text-gradient"></i> Backend Dev
           </li>
-          <li class="service__item fullstack">
-            <span><i class="uil uil-apps"></i></span>
-            <div>
-              <h3>Full Stack</h3>
-              <p>2 Projects</p>
-            </div>
+          <li
+            class="glass-card"
+            style="
+              padding: 1rem;
+              border: none;
+              background: rgba(255, 255, 255, 0.03);
+            "
+          >
+            <i class="uil uil-window text-gradient"></i> UI/UX Design
           </li>
         </ul>
-        <article
-          class="services__right"
-          data-aos="fade-in"
-          data-aos-delay="300"
-        ></article>
-      </div>
-    </section>
-    <!-- * END OF SERVICES SECTION -->
+      </article>
 
-    <section class="projects" id="projects">
-      <h1>My Projects</h1>
-      <p>Projects which showcase my work</p>
-      <ul class="projects__categories">
-        <li class="active" data-filter="*">All</li>
-        <li data-filter=".html-css-javascript">HTML-CSS-JavaScript</li>
-        <li data-filter=".react-tailwind">React | Tailwind CSS</li>
-        <li data-filter=".fullstack">Full Stack Projects</li>
+      <!-- Tech Stack (Full Width) -->
+      <article class="glass-card col-span-12" data-aos="fade-up" id="skills">
+        <h3 style="margin-bottom: 2rem; text-align: center">My Tech Stack</h3>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Swiper items from original HTML -->
+            <div class="swiper-slide">
+              <img src="./assets/technologies/html-5.png" alt="HTML" />
+              <h3>HTML</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/technologies/css.png" alt="CSS" />
+              <h3>CSS</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/technologies/javascript.png" alt="JS" />
+              <h3>JavaScript</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/technologies/typescript.png" alt="TS" />
+              <h3>TypeScript</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/technologies/react.png" alt="React" />
+              <h3>React</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/technologies/nextjs-13.svg" alt="Next" />
+              <h3>Next.js</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/technologies/node-js.png" alt="Node" />
+              <h3>Node.js</h3>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/technologies/mongodb.png" alt="Mongo" />
+              <h3>MongoDB</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/technologies/tailwind-css.png"
+                alt="Tailwind"
+              />
+              <h3>Tailwind</h3>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Experience / Education -->
+      <article class="glass-card col-span-6" data-aos="fade-up">
+        <h3><i class="uil uil-graduation-cap"></i> Education</h3>
+        <div style="margin-top: 2rem">
+          <div class="qual-item">
+            <h4>Master's Degree - MCA</h4>
+            <small class="text-secondary">SV University | 2024 - Present</small>
+          </div>
+          <div class="qual-item">
+            <h4>Bachelor's Degree - BSc</h4>
+            <small class="text-secondary"
+              >SBVR Degree College | 2019 - 2022</small
+            >
+          </div>
+        </div>
+      </article>
+
+      <!-- Connect / Contact -->
+      <article class="glass-card col-span-6" data-aos="fade-up" id="contact">
+        <h3><i class="uil uil-envelope"></i> Let's Connect</h3>
+        <p style="margin-top: 1rem; margin-bottom: 2rem">
+          Open for freelance opportunities and full-time roles.
+        </p>
+        <form
+          action="https://formspree.io/f/xjggevbl"
+          method="POST"
+          class="contact-form"
+          id="contact-form"
+        >
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div id="form-status" style="margin-top: 1rem; display: none"></div>
+      </article>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      class="container"
+      id="projects"
+      style="margin-top: 4rem; margin-bottom: 8rem"
+    >
+      <h2 style="font-size: 3rem; margin-bottom: 2rem">Featured Projects</h2>
+
+      <!-- Filter Buttons -->
+      <ul
+        class="projects__categories"
+        style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap"
+      >
+        <li class="btn btn-outline sm" data-filter="*">All</li>
+        <li class="btn btn-outline sm" data-filter=".html-css-javascript">
+          HTML/CSS/JS
+        </li>
+        <li class="btn btn-outline sm" data-filter=".react-tailwind">React</li>
+        <li class="btn btn-outline sm" data-filter=".fullstack">Full Stack</li>
       </ul>
 
+      <!-- Projects Grid (Injected by JS) -->
       <div
-        class="container projects__container"
-        data-aos="fade-in"
-        data-aos-delay="300"
+        class="projects__container"
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        "
       >
-        <article class="project mix html-css-javascript" data-order="1">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/edge-ledger.jpg"
-              alt="Edge Ledger Website Thumbnail"
-            />
-          </div>
-          <h3>Edge Ledger</h3>
-          <p>
-            A Finance Company Website developed using HTML & CSS, focused mainly
-            on Background Images and overall Website looks & appearance
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-edge-ledger-project.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/html-css-projects/tree/main/EDGELEDGER_PROJECT"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="2">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/news-grid.jpg"
-              alt="News Grid Website Thumbnail"
-            />
-          </div>
-          <h3>News Grid</h3>
-          <p>
-            A News Website made using HTML & CSS, focused mainly on CSS Grid and
-            Flexbox Layout Models
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-news-grid-project.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/html-css-projects/tree/main/News_Grid_Project"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="3">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/credit-card-landing-page.jpg"
-              alt="Credit Card Webstie Thumbnail"
-            />
-          </div>
-          <h3>Credit Card Website</h3>
-          <p>
-            A Credit Card Website Landing Page developed using HTML & CSS,
-            focused mainly on CSS Position Properties and Layouts
-          </p>
-          <h5 class="responsive-false">Responsive: <span>false</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-credit-card-landing-page.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/HTML%20%26%20CSS/FSJS%202.0%20Project%2007%20Credit%20Card%20Landing%20Page"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="4">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/hosting-website-landing-page.jpg"
-              alt="Hosting Website Thumbnail"
-            />
-          </div>
-          <h3>Hosting Website</h3>
-          <p>
-            A Hosting Services Website Landing Page developed using HTML & CSS,
-            focused mainly on CSS Position Properties and Layouts and overall
-            Design of the website
-          </p>
-          <h5 class="responsive-false">Responsive: <span>false</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-hosting-site-landing-page.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/HTML%20%26%20CSS/FSJS%202.0%20Project%2008%20Hosting%20Site%20Landing%20Page"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="5">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/gaming-website-landing-page.jpg"
-              alt="Gaming Website Thumbnail"
-            />
-          </div>
-          <h3>Gaming Website</h3>
-          <p>
-            A Gaming Website Landing Page developed using HTML & CSS, focused
-            mainly on CSS Position Properties, button styling and Background
-            images alignment
-          </p>
-          <h5 class="responsive-false">Responsive: <span>false</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-gaming-website-landing-page.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/HTML%20%26%20CSS/FSJS%202.0%20Project%2009%20Gaming%20Landing%20Page"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="6">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/real-estate-landing-page.jpg"
-              alt="Real Estate Website Thumbnail"
-            />
-          </div>
-          <h3>RealEstate Website</h3>
-          <p>
-            A Real Estate Website Landing Page developed using HTML & CSS,
-            focused mainly on CSS Position Properties, overall website
-            appearance
-          </p>
-          <h5 class="responsive-false">Responsive: <span>false</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-real-estate-landing-page.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/HTML%20%26%20CSS/FSJS%202.0%20Project%2010%20Real%20Estate%20Landing%20Page"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="7">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/beats-landing-page.jpg"
-              alt="Beats Website Thumbnail"
-            />
-          </div>
-          <h3>Beats Website</h3>
-          <p>
-            An Audio Company Website Landing Page developed using HTML & CSS,
-            focused mainly on CSS Image Properties, alignment and buttons
-          </p>
-          <h5 class="responsive-false">Responsive: <span>false</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-beats-landing-page.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/HTML%20%26%20CSS/FSJS%202.0%20Project%2011%20Beats%20Landing%20Page"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="8">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/data-analytics-landing-page.jpg"
-              alt="Data Analytics Website Thumbnail"
-            />
-          </div>
-          <h3>Data Analytics Website</h3>
-          <p>
-            A Data Analytics Website Landing Page developed using HTML & CSS,
-            focused mainly on CSS Backgrounds, overall website appearance
-          </p>
-          <h5 class="responsive-false">Responsive: <span>false</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-data-analytics-landing-page.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/HTML%20%26%20CSS/FSJS%202.0%20Project%2012%20Data%20Analytics%20Landing%20Page"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="9">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/calculator-project.jpg"
-              alt="Calculator Website Thumbnail"
-            />
-          </div>
-          <h3>Calculator</h3>
-          <p>Calculator app</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-calculator-app.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/JavaScript%20Projects/Calculator"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="10">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/item-lister.jpg"
-              alt="Item Lister Website Thumbnail"
-            />
-          </div>
-          <h3>Item Lister</h3>
-          <p>Item Lister Website</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-item-lister.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/JavaScript%20Projects/Item%20Lister%20Project"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="11">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/image-lightbox.jpg"
-              alt="Image LightBox Website Thumbnail"
-            />
-          </div>
-          <h3>Image LightBox</h3>
-          <p>Image LightBox Website</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-image-light-box.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/JavaScript%20Projects/Image%20LightBox"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix html-css-javascript" data-order="12">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/omnifood-website-landing.jpg"
-              alt="OmniFood Website Thumbnail"
-            />
-          </div>
-          <h3>OmniFood</h3>
-          <p>A Food Website landing page developed using HTML & CSS</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-omnifood-website-landing-page.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/Omnifood-Website-Landing-Page"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="13">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/fast-react-pizza-co.jpg"
-              alt="Fast React Pizza.Co Website Thumbnail"
-            />
-          </div>
-          <h3>Fast React Pizza.Co</h3>
-          <p>A Pizza Cart website developed using React & Tailwind CSS</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-fast-react-pizza-co.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/fast-react-pizza-co"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="14">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/food kitchen.png"
-              alt="Food Kitchen Website Thumbnail"
-            />
-          </div>
-          <h3>Food Kitchen</h3>
-          <p>
-            A Food Ordering Website is similiar to Swiggy Website developed
-            using React & Tailwind CSS
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://food-kitchen-vasu.vercel.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/food-kitchen"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="15">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/eat-and-split.jpg"
-              alt="Eat and Split Website Thumbnail"
-            />
-          </div>
-          <h3>Eat and Split</h3>
-          <p>A Bill Split Calculator Application developed using React</p>
-          <h5 class="responsive-false">Responsive: <span>false</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://eat-and-split.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/eat-and-split"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="16">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/best-eats-react-tailwind-food-website.jpg"
-              alt="Eat and Split Website Thumbnail"
-            />
-          </div>
-          <h3>Best Eats</h3>
-          <p>
-            A Food Website landing page developed using React and Tailwind CSS
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://react-tailwind-food-app.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/react-tailwind-food-website"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="17">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/use pop corn.png"
-              alt="VSK Foods Website Thumbnail"
-            />
-          </div>
-          <h3>Use Popcorn</h3>
-          <p>
-            A Movie Search Website, where we can search movies, and add them to
-            the wishlist.
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://usepopcorn-vasu.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/use-popcorn"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="18">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/mobile-shopping-cart.jpg"
-              alt="Mobile Shopping Cart Website Thumbnail"
-            />
-          </div>
-          <h3>Mobile Shop</h3>
-          <p>A Mobile Shopping Cart Website made using React</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://mobile-shopping-cart-vasu.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/mobile-shopping-cart-react"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="19">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/netfix-gpt.jpg"
-              alt="Netfix GPT Website Thumbnail"
-            />
-          </div>
-          <h3>Netlfix GPT</h3>
-          <p>
-            A Netfix website clone developed using React, Tailwind CSS and
-            Firebase <br />
-            Note: This website is under progress
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-netfilx-gpt.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/netflix-gpt"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="20">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/rock-paper-scissor.jpg"
-              alt="Rock-Paper-Scissor Thumbnail"
-            />
-          </div>
-          <h3>Rock Paper Scissors</h3>
-          <p>Rock Paper Scissors Game</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-rock-paper-scissor.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/React/rock-paper-scissor"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="21">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/vs-code-clone.jpg"
-              alt="VS Code Website Thumbnail"
-            />
-          </div>
-          <h3>VS Code Clone</h3>
-          <p>VS Code Website clone developed using Tailwind CSS</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-vs-code-clone.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/FSJS-2.0/tree/main/Tailwind%20CSS/Project%2001%20VS%20Code%20Clone"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="22">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/challenges-app-react.jpg"
-              alt="Challenges Website Thumbnail"
-            />
-          </div>
-          <h3>Challenges Website</h3>
-          <p>
-            A Challenges Website developed using React and Framer motion. Mainly
-            Focused on Animations and Transitions
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://challenges-app-react.netlify.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/challeges-app-with-react"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix react-tailwind" data-order="23">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/cook-mom.png"
-              alt="Cook-Mom Website Thumbnail"
-            />
-          </div>
-          <h3>Cook-Mom</h3>
-          <p>A Recipe search website developed using React and Tailwind CSS</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://cook-mom-ten.vercel.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/Cook-Mom"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix fullstack" data-order="24">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/proshop-mern.jpg"
-              alt="Proshop Website Thumbnail"
-            />
-          </div>
-          <h3>Proshop</h3>
-          <p>An Ecommerce website developed using MERN stack</p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://proshop-r9ag.onrender.com/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/proshop-mern"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix fullstack" data-order="25">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/promptopia.png"
-              alt="Promptopia Website Thumbnail"
-            />
-          </div>
-          <h3>Promptopia</h3>
-          <p>
-            Promptopia is an open-source AI prompting tool for modern world to
-            discover, create and share creative prompts - developed using
-            Next.js
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vasu-promptopia.vercel.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/promptopia"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix fullstack" data-order="26">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/vsk-estate-mern.png"
-              alt="VSK-Estate Website Thumbnail"
-            />
-          </div>
-          <h3>VSK Estate</h3>
-          <p>
-            VSK Estate is a RealEstate project developed using MERN Stack along
-            with Tailwind CSS for Styling
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://vsk-estate-mern.onrender.com/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/vsk-estate-mern"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix fullstack" data-order="27">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/property-pulse.png"
-              alt="Property Pulse Website Thumbnail"
-            />
-          </div>
-          <h3>Property Pulse</h3>
-          <p>
-            Property Pulse is a Property Rental Fullstack Application developed
-            using Next.js 14
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://property-pulse-vasu.vercel.app/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/property-pulse"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
-        <article class="project mix fullstack" data-order="28">
-          <div class="project__image">
-            <img
-              src="./assets/project-thumbnails/streamify.png"
-              alt="Streamify Website Thumbnail"
-            />
-          </div>
-          <h3>Streamify</h3>
-          <p>
-            Streamify is a Language Learning Platform built using MERN Stack
-          </p>
-          <h5 class="responsive-true">Responsive: <span>true</span></h5>
-          <div class="project__cta">
-            <a
-              href="https://streamify-1pmm.onrender.com/"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-link-alt"></i
-            ></a>
-            <a
-              href="https://github.com/Sreenivasulu-Kalluru/streamify"
-              class="btn sm"
-              target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </div>
-        </article>
+        <!-- Rendered via index.js -->
       </div>
     </section>
-    <!-- * END OF PROJECTS SECTION -->
 
-    <section class="swiper" id="skills">
-      <h1>My Tech Stack</h1>
-      <p>Prgramming Languages, Technologies & Frameworks I'm proficient with</p>
-      <div class="swiper-wrapper" data-aos="fade-in" data-aos-delay="300">
-        <div class="swiper-slide">
-          <img src="./assets/technologies/html-5.png" alt="HTML 5" />
-          <h3>HTML</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/css.png" alt="CSS 3" />
-          <h3>CSS</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/javascript.png" alt="JavaScript" />
-          <h3>JavaScript</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/typescript.png" alt="TypeScript" />
-          <h3>TypeScript</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/bootstrap.png" alt="Bootstrap" />
-          <h3>Bootstrap</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="/assets/technologies/tailwind-css.png" alt="Tailwind CSS" />
-          <h3>Tailwind</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/react.png" alt="React.js" />
-          <h3>React.js</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/redux.png" alt="Redux.js" />
-          <h3>Redux.js</h3>
-        </div>
-        <div class="swiper-slide">
-          <img
-            style="margin-block: 50px"
-            src="./assets/technologies/nextjs-13.svg"
-            alt="Next.js"
-          />
-          <h3>Next.js</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/node-js.png" alt="Node.js" />
-          <h3>Node.js</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/express.png" alt="Express.js" />
-          <h3>Express.js</h3>
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/technologies/mongodb.png" alt="MongoDB" />
-          <h3>Mongo DB</h3>
-        </div>
+    <!-- Floating Navigation -->
+    <nav class="navbar">
+      <div class="nav__menu">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-    </section>
-    <!-- * END OF SKILLS SECTION -->
+      <button class="nav__theme-btn">
+        <i class="uil uil-moon"></i>
+      </button>
+    </nav>
 
-    <!-- <section class="contact" id="contact">
-      <h1>Contact Me!</h1>
-      <div class="container contact__container">
-        <ul class="contact__list" data-aos="fade-in" data-aos-delay="300">
-          <li>
-            <a
-              href="mailto:vaasuk24@gmail.com"
-              target="_blank"
-              class="contact__list-item"
-              title="Email"
-            >
-              <i class="uil uil-envelope"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://wa.me/+919182138969"
-              target="_blank"
-              class="contact__list-item"
-              title="WhatsApp"
-            >
-              <i class="uil uil-whatsapp"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="tel:+919182138969"
-              target="_blank"
-              class="contact__list-item"
-              title="Phone"
-            >
-              <i class="uil uil-phone"></i
-            ></a>
-          </li>
-        </ul>
-
-        <form
-          action="https://formsubmit.co/77b093e4e98efc3e7cc3a920230c6b56"
-          method="POST"
-          class="contact__form"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            required
-          />
-          <textarea
-            rows="7"
-            name="message"
-            placeholder="Message"
-            required
-          ></textarea>
-          <button type="submit" class="btn btn-contact">Send</button>
-        </form>
-      </div>
-    </section> -->
-    <!-- *END OF CONTACT SECTION -->
-
-    <footer>
-      <div
-        class="container footer__container"
-        data-aos="zoom-in"
-        data-aos-delay="300"
-      >
-        <ul class="footer__menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Tech Stack</a></li>
-          <!-- <li><a href="#contact">Contact</a></li> -->
-        </ul>
-        <ul class="footer__socials">
-          <li title="LinkedIn">
-            <a href="https://www.linkedin.com/in/vasuk24/" target="_blank"
-              ><i class="uil uil-linkedin"></i
-            ></a>
-          </li>
-          <li title="GitHub">
-            <a href="https://github.com/Sreenivasulu-Kalluru" target="_blank"
-              ><i class="uil uil-github"></i
-            ></a>
-          </li>
-          <li title="Hashnode">
-            <a href="https://hashnode.com/@VasuK24" target="_blank"
-              ><i class="fa-brands fa-hashnode"></i
-            ></a>
-          </li>
-          <li title="Instagram">
-            <a href="https://www.instagram.com/iam.vs24/" target="_blank"
-              ><i class="uil uil-instagram"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__copyright">
-        <small>Copyright &copy; 2025. All rights reserved.</small>
-      </div>
-    </footer>
-
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js');
-      }
-    </script>
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="./mixitup-v3/dist/mixitup.min.js"></script>
+    <script src="./assets/mixitup.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1500,
-        offset: 80,
+      AOS.init({ duration: 1000, offset: 50 });
+      // Initialize Swiper for Bento Grid
+      new Swiper('.swiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        autoplay: { delay: 2000, disableOnInteraction: false },
+        breakpoints: {
+          640: { slidesPerView: 4 },
+          768: { slidesPerView: 5 },
+          1024: { slidesPerView: 6 },
+        },
       });
     </script>
-    <script src="./typewriter.js"></script>
     <script src="./data.js"></script>
     <script src="./index.js"></script>
   </body>
