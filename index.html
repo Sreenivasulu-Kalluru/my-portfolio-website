@@ -247,9 +247,28 @@
           class="contact-form"
           id="contact-form"
         >
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <button type="submit" class="btn">Send Message</button>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" />
+            <input type="text" name="subject" placeholder="Subject" required />
+          </div>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">
+            Send Message <i class="uil uil-message"></i>
+          </button>
         </form>
         <div id="form-status" style="margin-top: 1rem; display: none"></div>
       </article>
