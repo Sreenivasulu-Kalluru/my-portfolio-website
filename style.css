@@ -59,7 +59,7 @@ body.light-mode {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  scroll-padding-top: 6rem; /* Global offset */
+  scroll-padding-top: 2rem; /* Global offset */
 }
 
 /* Specific offsets for navigation targets */
