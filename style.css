@@ -59,7 +59,15 @@ body.light-mode {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  scroll-padding-top: 6rem; /* Offset for fixed navbar on mobile */
+  scroll-padding-top: 6rem; /* Global offset */
+}
+
+/* Specific offsets for navigation targets */
+#about,
+#skills,
+#projects,
+#contact {
+  scroll-margin-top: 6rem;
 }
 
 body {
