@@ -68,9 +68,11 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
 
     <!-- Header / Hero -->
     <header class="container">
@@ -88,13 +90,22 @@
           products.</span
         >
       </p>
-      <div data-aos="fade-up" data-aos-delay="300">
+      <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
         <a href="#projects" class="btn"
           >View Work <i class="uil uil-arrow-right"></i
         ></a>
-        <a href="#contact" class="btn btn-outline" style="margin-left: 1rem"
-          >Contact Me</a
-        >
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="./assets/resume.pdf" class="btn btn-outline" download>
+          <i class="uil uil-file-download-alt"></i> Resume
+        </a>
+      </div>
+
+      <div class="scroll-down">
+        <a href="#about">
+          <i class="uil uil-mouse-alt"></i>
+          <span>Scroll Down</span>
+          <i class="uil uil-arrow-down"></i>
+        </a>
       </div>
     </header>
 
@@ -232,6 +243,16 @@
               >SBVR Degree College | 2019 - 2022</small
             >
           </div>
+          <div class="qual-item">
+            <h4>Intermediate - MPC</h4>
+            <small class="text-secondary"
+              >Sri Chaitanya Jr College | 2017 - 2019</small
+            >
+          </div>
+          <div class="qual-item">
+            <h4>SSC</h4>
+            <small class="text-secondary">ZPHS Kamalakuru | 2016 - 2017</small>
+          </div>
         </div>
       </article>
 
@@ -308,6 +329,52 @@
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__content">
+          <h3 class="text-gradient">VASU K</h3>
+          <p>
+            Building digital experiences that matter. Full Stack Developer based
+            in India.
+          </p>
+        </div>
+
+        <div class="footer__socials">
+          <a
+            href="https://github.com/Sreenivasulu-Kalluru"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="uil uil-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/vasuk"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="uil uil-linkedin"></i>
+          </a>
+          <a
+            href="https://twitter.com/vasuk"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <i class="uil uil-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Vasu K. All rights reserved.</p>
+        <p>Made with <i class="uil uil-heart text-gradient"></i></p>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to Top">
+      <i class="uil uil-arrow-up"></i>
+    </button>
+
     <!-- Floating Navigation -->
     <nav class="navbar">
       <div class="nav__menu">
@@ -316,7 +383,7 @@
         <a href="#projects">Work</a>
         <a href="#contact">Contact</a>
       </div>
-      <button class="nav__theme-btn">
+      <button class="nav__theme-btn" aria-label="Toggle Theme">
         <i class="uil uil-moon"></i>
       </button>
     </nav>

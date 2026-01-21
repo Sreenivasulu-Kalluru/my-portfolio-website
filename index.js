@@ -40,6 +40,7 @@ const containerEl = document.querySelector('.projects__container');
 // * SCROLL PROGRESS & BACK TO TOP
 const scrollProgress = document.getElementById('scroll-progress');
 const backToTopBtn = document.querySelector('.back-to-top');
+const navLinks = document.querySelectorAll('.nav__menu a');
 
 window.addEventListener('scroll', () => {
   // Scroll Progress
@@ -61,7 +62,51 @@ window.addEventListener('scroll', () => {
       backToTopBtn.classList.remove('visible');
     }
   }
+
+  // Scrollspy logic
+  let currentSection = '';
+
+  navLinks.forEach((link) => {
+    const sectionId = link.getAttribute('href').substring(1);
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      // If the section is in the middle-top area of the viewport
+      if (rect.top <= 250 && rect.bottom >= 200) {
+        currentSection = sectionId;
+      }
+    }
+  });
+
+  // Default to About at the top
+  if (window.scrollY < 300) {
+    currentSection = 'about';
+  }
+
+  // Ensure Contact at the bottom
+  const scrollTotal =
+    document.documentElement.scrollHeight - window.innerHeight;
+  if (window.scrollY >= scrollTotal - 50) {
+    currentSection = 'contact';
+  }
+
+  navLinks.forEach((link) => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
+  });
 });
+
+// Back To Top Click
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+}
 
 const renderProjects = () => {
   projects.forEach((project) => {
