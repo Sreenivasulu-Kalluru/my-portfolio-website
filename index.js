@@ -334,3 +334,9 @@ if (contactForm && formStatus) {
     }
   });
 }
+
+// * DYNAMIC COPYRIGHT YEAR
+const copyrightYear = document.getElementById('copyright-year');
+if (copyrightYear) {
+  copyrightYear.innerText = new Date().getFullYear();
+}
