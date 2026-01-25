@@ -302,7 +302,7 @@ p {
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--glass-highlight);
+  border: 1px solid var(--text-secondary);
   color: var(--text-primary);
 }
 
