@@ -609,12 +609,14 @@ header {
   min-height: 150px;
 }
 
-.contact-form input::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
   color: var(--text-secondary);
   opacity: 0.6;
 }
 
-.contact-form input:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: var(--primary-color);
   background: var(--glass-bg);
 }
