@@ -129,11 +129,11 @@ const renderProjects = () => {
           }</span></h5>
           <div class="project__cta">
               <a href="${
-                project.demoLink
-              }" class="btn btn-outline sm" target="_blank"><i class="uil uil-link-alt"></i></a>
-              <a href="${
                 project.repoLink
               }" class="btn btn-outline sm" target="_blank"><i class="uil uil-github"></i></a>
+              <a href="${
+                project.demoLink
+              }" class="btn btn-outline sm" target="_blank"><i class="uil uil-link-alt"></i></a>
           </div>
         </div>
     `;
