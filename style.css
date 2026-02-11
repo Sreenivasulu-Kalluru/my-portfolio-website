@@ -407,6 +407,18 @@ header.container {
   gap: 1rem;
 }
 
+@media (max-width: 480px) {
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Scroll Down Indicator */
 .scroll-down {
   position: absolute;
@@ -663,6 +675,7 @@ header.container {
 .project-content p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -802,7 +815,7 @@ textarea:focus {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition);
-  z-index: 999;
+  z-index: 2000;
 }
 
 .back-to-top.active {
