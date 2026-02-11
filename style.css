@@ -287,6 +287,7 @@ p {
   .navbar {
     padding: 1rem;
     box-shadow: none; /* Removed shadow on mobile */
+    background: var(--bg-color);
   }
 
   .nav__menu {
@@ -317,7 +318,7 @@ p {
   }
 
   .nav__menu a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: var(--text-primary);
     flex-direction: row;
@@ -342,6 +343,10 @@ p {
   /* Reset body padding */
   body {
     padding-bottom: 0;
+  }
+
+  body.dark-mode .navbar {
+    background: var(--bg-color);
   }
 }
 
