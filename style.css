@@ -357,6 +357,7 @@ body.dark-mode .navbar {
 
 /* --- Hero Section --- */
 header.container {
+  position: relative;
   padding-top: 8rem;
   padding-bottom: 6rem;
 }
@@ -381,10 +382,86 @@ header.container {
   color: var(--text-secondary);
 }
 
+.cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: var(--accent-color);
+  animation: blink 1s infinite;
+  margin-left: 5px;
+  color: var(--accent-color);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .hero-btns {
   margin-top: 2.5rem;
   display: flex;
   gap: 1rem;
+}
+
+/* Scroll Down Indicator */
+.scroll-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.scroll-down a {
+  padding-top: 60px;
+}
+
+.scroll-down a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 2px solid var(--text-tertiary);
+  border-bottom: 2px solid var(--text-tertiary);
+  transform: rotate(-45deg);
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+
+.scroll-down a span:nth-of-type(1) {
+  top: 0px;
+  animation-delay: 0s;
+}
+.scroll-down a span:nth-of-type(2) {
+  top: 16px;
+  animation-delay: 0.15s;
+}
+.scroll-down a span:nth-of-type(3) {
+  top: 32px;
+  animation-delay: 0.3s;
+}
+
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
 }
 
 /* --- Cards (Generic) --- */
@@ -560,6 +637,39 @@ header.container {
 }
 
 /* Project Card specifics */
+.glass-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.project-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.project-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 4.5rem; /* Ensure consistent height for shorter descriptions */
+  margin-bottom: 1rem;
+}
+
 .project-card-image {
   height: 200px;
   background-color: var(--surface-hover);
@@ -577,6 +687,14 @@ header.container {
 
 .card:hover .project-card-image img {
   transform: scale(1.02);
+}
+
+.project-badges {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
 }
 
 .project__cta {
@@ -750,7 +868,7 @@ textarea:focus {
 
   header.container {
     padding-top: 8rem; /* Increased spacing from navbar */
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
   }
 
   .projects__container {

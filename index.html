@@ -81,7 +81,7 @@
         <h4 class="hero-subtitle reveal-text">Hello, I'm Vasu</h4>
         <h1 class="hero-title reveal-text reveal-delay-1">
           Transforming Ideas into <br />
-          <span class="highlight">Digital Experiences</span>
+          <span class="highlight typing-text"></span><span class="cursor">|</span>
         </h1>
         <p class="hero-desc reveal-text reveal-delay-2">
           Full Stack Developer specializing in building exceptional digital
@@ -92,14 +92,23 @@
             >View Work <i class="uil uil-arrow-right"></i
           ></a>
           <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          <a href="./assets/Sreenivasulu Kalluru.pdf" class="btn btn-outline" download>Download CV <i class="uil uil-file-download"></i></a>
         </div>
+      </div>
+      </div>
+      <div class="scroll-down">
+        <a href="#about">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
     </header>
 
     <!-- Bento Grid Section -->
     <section id="about" class="container bento-grid">
       <!-- About Card (Large) -->
-      <article class="card card-lg col-span-8" data-aos="fade-up">
+      <article class="card card-lg col-span-8" data-aos="fade-up" data-tilt data-tilt-max="2" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
         <h3>About Me</h3>
         <p>
           I am a skilled MERN stack developer with a passion for crafting
@@ -120,7 +129,7 @@
       </article>
 
       <!-- Services / Focus (Side) -->
-      <article class="card col-span-4" data-aos="fade-up" data-aos-delay="100">
+      <article class="card col-span-4" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
         <h3>Focus</h3>
         <ul class="focus-list">
           <li><i class="uil uil-desktop"></i> Frontend Dev</li>
@@ -130,7 +139,7 @@
       </article>
 
       <!-- Tech Stack (Full Width) -->
-      <article class="card col-span-12" data-aos="fade-up" id="skills">
+      <article class="card col-span-12" data-aos="fade-up" id="skills" data-tilt data-tilt-max="2" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
         <h3>My Tech Stack</h3>
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -209,7 +218,7 @@
     <!-- Experience / Education & Contact Section -->
     <section class="container bento-grid" style="padding-top: 0">
       <!-- Experience / Education -->
-      <article class="card col-span-6" data-aos="fade-up" id="education">
+      <article class="card col-span-6" data-aos="fade-up" id="education" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
         <h3>Education</h3>
         <div class="timeline">
           <div class="timeline-item">
@@ -232,7 +241,7 @@
       </article>
 
       <!-- Connect / Contact -->
-      <article class="card col-span-6" data-aos="fade-up" id="contact">
+      <article class="card col-span-6" data-aos="fade-up" id="contact" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
         <h3>Let's Connect</h3>
         <p class="contact-desc">
           Open for freelance opportunities and full-time roles.
@@ -339,6 +348,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="./assets/mixitup.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -364,6 +374,7 @@
       });
     </script>
     <script src="./data.js"></script>
+    <script src="./typing.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

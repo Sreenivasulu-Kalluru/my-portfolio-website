@@ -137,9 +137,13 @@ const renderProjects = () => {
         <div class="project-content">
           <h3>${project.title}</h3>
           <p>${project.description}</p>
-          <h5 class="responsive-${project.responsive}">Responsive: <span>${
-            project.responsive
-          }</span></h5>
+          <div class="project-badges">
+            ${
+              project.responsive
+                ? '<i class="uil uil-desktop" title="Desktop Compatible"></i> <i class="uil uil-mobile-android" title="Mobile Responsive"></i>'
+                : '<i class="uil uil-desktop" title="Desktop Only"></i>'
+            }
+          </div>
           <div class="project__cta">
               <a href="${
                 project.repoLink
@@ -152,6 +156,16 @@ const renderProjects = () => {
     `;
 
     containerEl.appendChild(article);
+
+    // Initialize Tilt for this card
+    if (typeof VanillaTilt !== 'undefined') {
+      VanillaTilt.init(article, {
+        max: 5,
+        speed: 400,
+        glare: true,
+        'max-glare': 0.2,
+      });
+    }
   });
 };
 
