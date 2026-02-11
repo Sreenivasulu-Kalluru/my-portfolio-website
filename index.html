@@ -344,10 +344,17 @@
     <script>
       AOS.init({ duration: 800, offset: 50, easing: 'ease-out-cubic' });
       // Initialize Swiper for Bento Grid
-      new Swiper('.swiper', {
+      const swiper = new Swiper('.swiper', {
         slidesPerView: 3,
-        spaceBetween: 20,
-        autoplay: { delay: 3000, disableOnInteraction: false },
+        spaceBetween: 30,
+        loop: true,
+        speed: 5000, // Duration of transition
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false, // Keep moving
+        },
+        allowTouchMove: false, // Prevent manual swiping for consistent flow
         breakpoints: {
           640: { slidesPerView: 4 },
           768: { slidesPerView: 5 },

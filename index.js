@@ -156,36 +156,9 @@ const renderProjects = () => {
 };
 
 // Initial Render
-renderProjects();
-
-// * SWIPER JS - Testimonials Section
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    640: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-  },
-});
+if (containerEl) {
+  renderProjects();
+}
 
 // * NAVBAR BACKGROUND CHANGE ON-SCROLL
 // Navigation background on scroll

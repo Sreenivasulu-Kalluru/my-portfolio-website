@@ -222,7 +222,10 @@ p {
   -webkit-backdrop-filter: blur(10px);
   z-index: 1005; /* Highest */
   padding: 1rem 2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
   display: flex !important;
   justify-content: space-between;
   align-items: center;
@@ -283,6 +286,7 @@ p {
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
+    box-shadow: none; /* Removed shadow on mobile */
   }
 
   .nav__menu {
@@ -482,6 +486,9 @@ header.container {
 .swiper {
   width: 100%;
   padding: 1rem 0;
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
 }
 .swiper-slide {
   display: flex;
@@ -737,7 +744,7 @@ textarea:focus {
   }
 
   header.container {
-    padding-top: 4rem;
+    padding-top: 8rem; /* Increased spacing from navbar */
     padding-bottom: 4rem;
   }
 
