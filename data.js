@@ -38,18 +38,7 @@ const projects = [
     repoLink:
       'https://github.com/Sreenivasulu-Kalluru/Omnifood-Website-Landing-Page',
   },
-  {
-    id: 2,
-    title: 'Challenges Website',
-    category: 'react-tailwind',
-    image: './assets/project-thumbnails/optimized/challenges-app-react.webp',
-    description:
-      'A Challenges Website developed using React and Framer motion. Mainly Focused on Animations and Transitions',
-    responsive: true,
-    demoLink: 'https://challenges-app-react.netlify.app/',
-    repoLink:
-      'https://github.com/Sreenivasulu-Kalluru/challeges-app-with-react',
-  },
+
   {
     id: 3,
     title: 'Property Pulse',
@@ -72,17 +61,7 @@ const projects = [
     demoLink: 'https://streamify-1pmm.onrender.com/',
     repoLink: 'https://github.com/Sreenivasulu-Kalluru/streamify',
   },
-  {
-    id: 5,
-    title: 'Promptopia',
-    category: 'fullstack',
-    image: './assets/project-thumbnails/optimized/promptopia.webp',
-    description:
-      'Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts - developed using Next.js',
-    responsive: true,
-    demoLink: 'https://vasu-promptopia.vercel.app/',
-    repoLink: 'https://github.com/Sreenivasulu-Kalluru/promptopia',
-  },
+
   {
     id: 6,
     title: 'Proshop',

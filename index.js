@@ -39,6 +39,10 @@ const containerEl = document.querySelector('.projects__container');
 
 // * SCROLL PROGRESS & BACK TO TOP
 const scrollProgress = document.getElementById('scroll-progress');
+// * SCROLL SECTIONS ACTIVE LINK
+const sections = document.querySelectorAll(
+  'section[id], header[id], article[id]',
+);
 const backToTopBtn = document.querySelector('.back-to-top');
 const navLinks = document.querySelectorAll('.nav__menu a');
 
@@ -99,7 +103,16 @@ window.addEventListener('scroll', () => {
 });
 
 // Back To Top Click
+// Back To Top Click
 if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('active');
+    } else {
+      backToTopBtn.classList.remove('active');
+    }
+  });
+
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
@@ -111,7 +124,7 @@ if (backToTopBtn) {
 const renderProjects = () => {
   projects.forEach((project) => {
     const article = document.createElement('article');
-    article.className = `glass-card project mix ${project.category}`;
+    article.className = `glass-card project`; // Removed 'mix' and category classes
     article.setAttribute('data-order', project.id);
 
     // Initial HTML with Skeleton classes where appropriate or handling the load
@@ -144,14 +157,6 @@ const renderProjects = () => {
 
 // Initial Render
 renderProjects();
-
-var mixer = mixitup(containerEl, {
-  animation: {
-    enable: false,
-  },
-});
-
-mixer.filter('*');
 
 // * SWIPER JS - Testimonials Section
 const swiper = new Swiper('.swiper', {
@@ -202,6 +207,14 @@ if (btn && navMenu) {
   btn.addEventListener('click', () => {
     btn.classList.toggle('open');
     navMenu.classList.toggle('nav-open');
+
+    // Toggle Icon
+    const icon = btn.querySelector('i');
+    if (navMenu.classList.contains('nav-open')) {
+      icon.classList.replace('uil-bars', 'uil-multiply');
+    } else {
+      icon.classList.replace('uil-multiply', 'uil-bars');
+    }
   });
 
   // * Close Nav Menu on click of nav link on small screens i.e, < 780px
@@ -210,8 +223,10 @@ if (btn && navMenu) {
   if (window.innerWidth < 768) {
     navItems.forEach((item) => {
       item.addEventListener('click', () => {
-        navMenu.classList.toggle('nav-open');
-        btn.classList.toggle('open');
+        navMenu.classList.remove('nav-open');
+        btn.classList.remove('open');
+        const icon = btn.querySelector('i');
+        icon.classList.replace('uil-multiply', 'uil-bars');
       });
     });
   }
@@ -221,15 +236,15 @@ if (btn && navMenu) {
 const themeBtn = document.querySelector('.nav__theme-btn');
 
 const toggleTheme = () => {
-  document.body.classList.toggle('light-mode');
-  const isLight = document.body.classList.contains('light-mode');
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
 
-  if (isLight) {
+  if (isDark) {
+    themeBtn.innerHTML = '<i class="uil uil-sun"></i>';
+    window.localStorage.setItem('theme', 'dark');
+  } else {
     themeBtn.innerHTML = '<i class="uil uil-moon"></i>';
     window.localStorage.setItem('theme', 'light');
-  } else {
-    themeBtn.innerHTML = '<i class="uil uil-sun" title="Light"></i>';
-    window.localStorage.setItem('theme', 'dark');
   }
 };
 
@@ -240,13 +255,13 @@ if (themeBtn) {
 // * load theme on page load initially
 window.addEventListener('load', () => {
   const savedTheme = window.localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    document.body.classList.add('light-mode');
-    if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-moon"></i>';
+  // Default is light. If saved is 'dark', add class.
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-sun"></i>';
   } else {
-    document.body.classList.remove('light-mode');
-    if (themeBtn)
-      themeBtn.innerHTML = '<i class="uil uil-sun" title="Light"></i>';
+    document.body.classList.remove('dark-mode');
+    if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-moon"></i>';
   }
 });
 
