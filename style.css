@@ -493,7 +493,7 @@ header.container {
   padding: 1rem 0;
 }
 .swiper-wrapper {
-  transition-timing-function: linear;
+  transition-timing-function: linear !important;
 }
 .swiper-slide {
   display: flex;

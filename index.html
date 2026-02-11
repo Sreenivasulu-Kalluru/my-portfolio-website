@@ -348,13 +348,14 @@
         slidesPerView: 3,
         spaceBetween: 30,
         loop: true,
-        speed: 5000, // Duration of transition
+        freeMode: true,
+        speed: 5000,
         autoplay: {
           delay: 0,
           disableOnInteraction: false,
-          pauseOnMouseEnter: false, // Keep moving
+          pauseOnMouseEnter: false,
         },
-        allowTouchMove: false, // Prevent manual swiping for consistent flow
+        allowTouchMove: false,
         breakpoints: {
           640: { slidesPerView: 4 },
           768: { slidesPerView: 5 },
