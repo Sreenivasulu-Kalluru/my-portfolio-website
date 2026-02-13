@@ -852,7 +852,66 @@ textarea:focus {
 }
 
 /* --- Utils --- */
-/* Scroll Progress Bar */
+/* Back to Top with Progress */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--surface-color);
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top i {
+  font-size: 1.25rem;
+  color: var(--accent-color); /* Change to accent color for visibility */
+  z-index: 10;
+  position: relative;
+  transition: var(--transition);
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  background-color: transparent; /* Ensure background stays transparent */
+  box-shadow: none; /* Remove shadow */
+}
+
+/* SVG Progress Ring */
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg); /* Start from top */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.1s linear;
+  stroke: var(--accent-color);
+  stroke-width: 4;
+  /* Ensure the stroke starts from the top and goes clockwise */
+  transform-origin: 50% 50%;
+}
 #scroll-progress {
   position: fixed;
   top: 0;

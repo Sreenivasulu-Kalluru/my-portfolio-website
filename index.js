@@ -38,24 +38,35 @@ if (serviceDetails && servicesButtons.length > 0) {
 const containerEl = document.querySelector('.projects__container');
 
 // * SCROLL PROGRESS & BACK TO TOP
-const scrollProgress = document.getElementById('scroll-progress');
+
 // * SCROLL SECTIONS ACTIVE LINK
 const sections = document.querySelectorAll(
   'section[id], header[id], article[id]',
 );
 const backToTopBtn = document.querySelector('.back-to-top');
 const navLinks = document.querySelectorAll('.nav__menu a');
-
 window.addEventListener('scroll', () => {
-  // Scroll Progress
-  const scrollTop = document.documentElement.scrollTop;
-  const scrollHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  const scrolled = (scrollTop / scrollHeight) * 100;
+  // Scroll Progress Calculation for Circular Ring
+  const radius = 48;
+  const circumference = 2 * Math.PI * radius;
+  const scrollProgressCircle = document.querySelector('.progress-ring__circle');
 
-  if (scrollProgress) {
-    scrollProgress.style.width = `${scrolled}%`;
+  // Set initial state if logic hasn't run yet (though ideal in setup, doing here ensures it updates on resize/load)
+  if (scrollProgressCircle) {
+    scrollProgressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+
+    // Calculate scroll percentage
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const scrollPercentage = scrollTop / scrollHeight;
+
+    // Calculate offset: offset = circumference - (percentage * circumference)
+    const offset = circumference - scrollPercentage * circumference;
+
+    scrollProgressCircle.style.strokeDashoffset = offset;
   }
 
   // Back To Top Visibility
