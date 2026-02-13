@@ -797,6 +797,18 @@ textarea:focus {
 }
 
 /* --- Utils --- */
+/* Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--accent-color);
+  z-index: 99999;
+  transition: width 0.1s;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 2rem;
