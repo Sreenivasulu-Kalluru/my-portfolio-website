@@ -194,14 +194,6 @@ if (btn && navMenu) {
   btn.addEventListener('click', () => {
     btn.classList.toggle('open');
     navMenu.classList.toggle('nav-open');
-
-    // Toggle Icon
-    const icon = btn.querySelector('i');
-    if (navMenu.classList.contains('nav-open')) {
-      icon.classList.replace('uil-bars', 'uil-multiply');
-    } else {
-      icon.classList.replace('uil-multiply', 'uil-bars');
-    }
   });
 
   // * Close Nav Menu on click of nav link on small screens i.e, < 780px
@@ -212,8 +204,6 @@ if (btn && navMenu) {
       item.addEventListener('click', () => {
         navMenu.classList.remove('nav-open');
         btn.classList.remove('open');
-        const icon = btn.querySelector('i');
-        icon.classList.replace('uil-multiply', 'uil-bars');
       });
     });
   }
