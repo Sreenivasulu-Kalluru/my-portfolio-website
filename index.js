@@ -343,3 +343,9 @@ const copyrightYear = document.getElementById('copyright-year');
 if (copyrightYear) {
   copyrightYear.innerText = new Date().getFullYear();
 }
+
+// * DYNAMIC PROJECT COUNT
+const projectCountEl = document.getElementById('project-count-val');
+if (projectCountEl) {
+  projectCountEl.innerText = `${projects.length}+`;
+}
