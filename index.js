@@ -1,6 +1,4 @@
 // * SERVICES TOGGLE - Updated for Bento Grid
-// In the new layout, we might not need the dynamic toggle, but let's keep it safe or remove it.
-// Since the new layout uses static bento cards for services, I'll comment this out or update it.
 const servicesButtons = document.querySelectorAll('.service__item');
 const serviceDetails = document.querySelector('.services__right');
 
@@ -33,117 +31,20 @@ if (serviceDetails && servicesButtons.length > 0) {
   getService('frontend');
 }
 
-// * MIXITUP - Projects Section
-// * MIXITUP - Projects Section
+// * PROJECTS - Render
 const containerEl = document.querySelector('.projects__container');
-
-// * SCROLL PROGRESS & BACK TO TOP
-
-// * SCROLL SECTIONS ACTIVE LINK
-const sections = document.querySelectorAll(
-  'section[id], header[id], article[id]',
-);
-const backToTopBtn = document.querySelector('.back-to-top');
-const navLinks = document.querySelectorAll('.nav__menu a');
-window.addEventListener('scroll', () => {
-  // Scroll Progress Calculation for Circular Ring
-  const radius = 48;
-  const circumference = 2 * Math.PI * radius;
-  const scrollProgressCircle = document.querySelector('.progress-ring__circle');
-
-  // Set initial state if logic hasn't run yet (though ideal in setup, doing here ensures it updates on resize/load)
-  if (scrollProgressCircle) {
-    scrollProgressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-
-    // Calculate scroll percentage
-    const scrollTop = document.documentElement.scrollTop;
-    const scrollHeight =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
-    const scrollPercentage = scrollTop / scrollHeight;
-
-    // Calculate offset: offset = circumference - (percentage * circumference)
-    const offset = circumference - scrollPercentage * circumference;
-
-    scrollProgressCircle.style.strokeDashoffset = offset;
-  }
-
-  // Back To Top Visibility
-  if (backToTopBtn) {
-    if (scrollTop > 500) {
-      backToTopBtn.classList.add('visible');
-    } else {
-      backToTopBtn.classList.remove('visible');
-    }
-  }
-
-  // Scrollspy logic
-  let currentSection = '';
-
-  navLinks.forEach((link) => {
-    const sectionId = link.getAttribute('href').substring(1);
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const rect = section.getBoundingClientRect();
-      // If the section is in the middle-top area of the viewport
-      if (rect.top <= 250 && rect.bottom >= 200) {
-        currentSection = sectionId;
-      }
-    }
-  });
-
-  // Default to About at the top
-  if (window.scrollY < 300) {
-    currentSection = 'about';
-  }
-
-  // Ensure Contact at the bottom
-  const scrollTotal =
-    document.documentElement.scrollHeight - window.innerHeight;
-  if (window.scrollY >= scrollTotal - 50) {
-    currentSection = 'contact';
-  }
-
-  navLinks.forEach((link) => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${currentSection}`) {
-      link.classList.add('active');
-    }
-  });
-});
-
-// Back To Top Click
-// Back To Top Click
-if (backToTopBtn) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add('active');
-    } else {
-      backToTopBtn.classList.remove('active');
-    }
-  });
-
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  });
-}
 
 const renderProjects = () => {
   projects.forEach((project) => {
     const article = document.createElement('article');
-    article.className = `glass-card project`; // Removed 'mix' and category classes
+    article.className = `glass-card project`;
     article.setAttribute('data-order', project.id);
 
-    // Initial HTML with Skeleton classes where appropriate or handling the load
     article.innerHTML = `
         <div class="project-card-image skeleton">
             <img src="${project.image}" alt="${
               project.title
-            }" loading="lazy" width="100%" height="auto" onload="this.parentElement.classList.remove('skeleton'); this.classList.add('loaded')" />
+            }" loading="lazy" width="400" height="200" onload="this.parentElement.classList.remove('skeleton'); this.classList.add('loaded')" />
         </div>
         <div class="project-content">
           <h3>${project.title}</h3>
@@ -151,17 +52,17 @@ const renderProjects = () => {
           <div class="project-badges">
             ${
               project.responsive
-                ? '<i class="uil uil-desktop" title="Desktop Compatible"></i> <i class="uil uil-mobile-android" title="Mobile Responsive"></i>'
-                : '<i class="uil uil-desktop" title="Desktop Only"></i>'
+                ? '<i class="uil uil-desktop" title="Desktop Compatible" aria-hidden="true"></i> <i class="uil uil-mobile-android" title="Mobile Responsive" aria-hidden="true"></i> <span class="sr-only">Desktop and Mobile Responsive</span>'
+                : '<i class="uil uil-desktop" title="Desktop Only" aria-hidden="true"></i> <span class="sr-only">Desktop Only</span>'
             }
           </div>
           <div class="project__cta">
               <a href="${
                 project.repoLink
-              }" class="btn btn-outline sm" target="_blank" title="Source Code"><i class="uil uil-github"></i></a>
+              }" class="btn btn-outline sm" target="_blank" rel="noopener noreferrer" title="Source Code" aria-label="View source code for ${project.title}"><i class="uil uil-github" aria-hidden="true"></i></a>
               <a href="${
                 project.demoLink
-              }" class="btn btn-outline sm" target="_blank" title="Live Demo"><i class="uil uil-link-alt"></i></a>
+              }" class="btn btn-outline sm" target="_blank" rel="noopener noreferrer" title="Live Demo" aria-label="View live demo of ${project.title}"><i class="uil uil-link-alt" aria-hidden="true"></i></a>
           </div>
         </div>
     `;
@@ -185,39 +86,147 @@ if (containerEl) {
   renderProjects();
 }
 
-// * NAVBAR BACKGROUND CHANGE ON-SCROLL
-// Navigation background on scroll
-window.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.navbar');
+// * CONSOLIDATED SCROLL HANDLER (performance: single listener with rAF)
+const backToTopBtn = document.querySelector('.back-to-top');
+const navLinks = document.querySelectorAll('.nav__menu a');
+const scrollProgressCircle = document.querySelector('.progress-ring__circle');
 
-  if (window.scrollY > 0) {
-    navbar.classList.add('navbar--scroll');
-  } else {
-    navbar.classList.remove('navbar--scroll');
-  }
-});
+// Pre-calculate the circle circumference once
+const RADIUS = 48;
+const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-// * NAV TOGGLE
+if (scrollProgressCircle) {
+  scrollProgressCircle.style.strokeDasharray = `${CIRCUMFERENCE} ${CIRCUMFERENCE}`;
+}
+
+let scrollTicking = false;
+
+const onScroll = () => {
+  if (scrollTicking) return;
+  scrollTicking = true;
+
+  requestAnimationFrame(() => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    // 1. Scroll Progress Ring
+    if (scrollProgressCircle && scrollHeight > 0) {
+      const scrollPercentage = scrollTop / scrollHeight;
+      const offset = CIRCUMFERENCE - scrollPercentage * CIRCUMFERENCE;
+      scrollProgressCircle.style.strokeDashoffset = offset;
+    }
+
+    // 2. Back-to-Top visibility
+    if (backToTopBtn) {
+      if (scrollTop > 300) {
+        backToTopBtn.classList.add('active');
+      } else {
+        backToTopBtn.classList.remove('active');
+      }
+    }
+
+    // 3. Navbar background on scroll
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      if (scrollTop > 0) {
+        navbar.classList.add('navbar--scroll');
+      } else {
+        navbar.classList.remove('navbar--scroll');
+      }
+    }
+
+    // 4. Scrollspy — active nav link
+    let currentSection = '';
+
+    navLinks.forEach((link) => {
+      const sectionId = link.getAttribute('href').substring(1);
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 250 && rect.bottom >= 200) {
+          currentSection = sectionId;
+        }
+      }
+    });
+
+    if (scrollTop < 300) {
+      currentSection = 'about';
+    }
+
+    const scrollTotal =
+      document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollTop >= scrollTotal - 50) {
+      currentSection = 'contact';
+    }
+
+    navLinks.forEach((link) => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentSection}`) {
+        link.classList.add('active');
+      }
+    });
+
+    scrollTicking = false;
+  });
+};
+
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Back To Top Click
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+}
+
+// * NAV TOGGLE with aria-expanded + Escape key
 const btn = document.getElementById('menu-btn');
 const navMenu = document.querySelector('.nav__menu');
 
+const closeNav = () => {
+  navMenu.classList.remove('nav-open');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+};
+
+const openNav = () => {
+  navMenu.classList.add('nav-open');
+  btn.classList.add('open');
+  btn.setAttribute('aria-expanded', 'true');
+};
+
 if (btn && navMenu) {
   btn.addEventListener('click', () => {
-    btn.classList.toggle('open');
-    navMenu.classList.toggle('nav-open');
+    const isOpen = navMenu.classList.contains('nav-open');
+    if (isOpen) {
+      closeNav();
+    } else {
+      openNav();
+    }
   });
 
-  // * Close Nav Menu on click of nav link on small screens i.e, < 780px
+  // Close nav on link click (mobile)
   const navItems = navMenu.querySelectorAll('a');
-
-  if (window.innerWidth < 768) {
-    navItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        navMenu.classList.remove('nav-open');
-        btn.classList.remove('open');
-      });
+  navItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        closeNav();
+      }
     });
-  }
+  });
+
+  // Close nav with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('nav-open')) {
+      closeNav();
+      btn.focus(); // Return focus to the toggle button
+    }
+  });
 }
 
 // * DARK & LIGHT THEME TOGGLE FEATURE
@@ -228,10 +237,10 @@ const toggleTheme = () => {
   const isDark = document.body.classList.contains('dark-mode');
 
   if (isDark) {
-    themeBtn.innerHTML = '<i class="uil uil-sun"></i>';
+    themeBtn.innerHTML = '<i class="uil uil-sun" aria-hidden="true"></i>';
     window.localStorage.setItem('theme', 'dark');
   } else {
-    themeBtn.innerHTML = '<i class="uil uil-moon"></i>';
+    themeBtn.innerHTML = '<i class="uil uil-moon" aria-hidden="true"></i>';
     window.localStorage.setItem('theme', 'light');
   }
 };
@@ -240,16 +249,15 @@ if (themeBtn) {
   themeBtn.addEventListener('click', toggleTheme);
 }
 
-// * load theme on page load initially
+// * Load theme on page load initially
 window.addEventListener('load', () => {
   const savedTheme = window.localStorage.getItem('theme');
-  // Default is light. If saved is 'dark', add class.
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
-    if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-sun"></i>';
+    if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-sun" aria-hidden="true"></i>';
   } else {
     document.body.classList.remove('dark-mode');
-    if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-moon"></i>';
+    if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-moon" aria-hidden="true"></i>';
   }
 });
 
@@ -274,7 +282,7 @@ if (cursorDot && cursorOutline) {
     );
   });
 
-  // * Magnetic/Hover Effect for links & buttons
+  // Magnetic/Hover Effect for links & buttons
   const interactiveElements = document.querySelectorAll(
     'a, button, .btn, .nav__theme-btn',
   );
@@ -291,6 +299,7 @@ if (cursorDot && cursorOutline) {
     });
   });
 }
+
 // * CONTACT FORM AJAX SUBMISSION
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
