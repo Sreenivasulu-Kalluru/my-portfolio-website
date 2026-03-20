@@ -1,10 +1,10 @@
 // * TYPING ANIMATION
 const typingTextSpy = document.querySelector('.typing-text');
 const words = [
-  'Digital Experiences',
-  'Web Applications',
-  'Robust Solutions',
-  'Creative UI/UX',
+  'Scalable Web Apps',
+  'Modern User Interfaces',
+  'Full Stack Solutions',
+  'Interactive Experiences',
 ];
 let wordIndex = 0;
 let charIndex = 0;

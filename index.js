@@ -47,8 +47,34 @@ const renderProjects = () => {
             }" loading="lazy" width="400" height="200" onload="this.parentElement.classList.remove('skeleton'); this.classList.add('loaded')" />
         </div>
         <div class="project-content">
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
+          <div class="project-header">
+            <h3>${project.title}</h3>
+            ${project.isCaseStudy ? '<span class="badge case-study-badge">Featured Case Study</span>' : ''}
+          </div>
+          <p class="project-desc">${project.description}</p>
+          
+          <div class="project-metrics">
+            <strong>Impact:</strong> ${project.impact}
+          </div>
+
+          <div class="project-features-list">
+            <strong>Key Features:</strong>
+            <ul>
+              ${project.keyFeatures.map((feature) => `<li><i class="uil uil-check-circle"></i> ${feature}</li>`).join('')}
+            </ul>
+          </div>
+
+          ${project.isCaseStudy ? `
+          <div class="project-case-study">
+            <p><strong>Architecture:</strong> ${project.architecture}</p>
+            <p><strong>Challenges:</strong> ${project.challenges}</p>
+          </div>
+          ` : ''}
+
+          <div class="project-tech-stack">
+            ${project.techStack.map((tech) => `<span class="tech-badge">${tech}</span>`).join('')}
+          </div>
+
           <div class="project-badges">
             ${
               project.responsive
@@ -59,10 +85,10 @@ const renderProjects = () => {
           <div class="project__cta">
               <a href="${
                 project.repoLink
-              }" class="btn btn-outline sm" target="_blank" rel="noopener noreferrer" title="Source Code" aria-label="View source code for ${project.title}"><i class="uil uil-github" aria-hidden="true"></i></a>
+              }" class="btn btn-outline sm" target="_blank" rel="noopener noreferrer" title="Source Code" aria-label="View source code for ${project.title}"><i class="uil uil-github" aria-hidden="true"></i> Source</a>
               <a href="${
                 project.demoLink
-              }" class="btn btn-outline sm" target="_blank" rel="noopener noreferrer" title="Live Demo" aria-label="View live demo of ${project.title}"><i class="uil uil-link-alt" aria-hidden="true"></i></a>
+              }" class="btn btn-outline sm" target="_blank" rel="noopener noreferrer" title="Live Demo" aria-label="View live demo of ${project.title}"><i class="uil uil-link-alt" aria-hidden="true"></i> Live Demo</a>
           </div>
         </div>
     `;
