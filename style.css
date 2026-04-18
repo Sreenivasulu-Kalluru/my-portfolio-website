@@ -1142,6 +1142,67 @@ textarea:focus-visible {
   }
 }
 
+/* --- Custom Cursor --- */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5), 0 0 20px rgba(37, 99, 235, 0.2);
+}
+
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover state: outline expands and fills slightly */
+.cursor-outline.cursor-hover {
+  width: 56px;
+  height: 56px;
+  opacity: 0.3;
+  background-color: rgba(37, 99, 235, 0.08);
+  border-color: var(--accent-color);
+}
+
+/* Hide inner dot when hovering interactive elements */
+.cursor-dot.cursor-dot-hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* Hide default cursor globally (desktop only) */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Hide custom cursor on touch devices */
+@media (pointer: coarse), (max-width: 768px) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+}
+
 /* --- Reduced Motion --- */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -1169,5 +1230,14 @@ textarea:focus-visible {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+
+  * {
+    cursor: auto !important;
   }
 }
