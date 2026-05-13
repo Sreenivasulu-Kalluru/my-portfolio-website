@@ -1082,19 +1082,6 @@ textarea:focus-visible {
   /* Ensure the stroke starts from the top and goes clockwise */
   transform-origin: 50% 50%;
 }
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: var(--accent-color);
-  z-index: 99999;
-  transition: width 0.1s;
-}
-
-/* (duplicate .back-to-top removed) */
-
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .col-span-12,

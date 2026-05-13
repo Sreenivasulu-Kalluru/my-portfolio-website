@@ -43,7 +43,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 2,
     title: 'Property Pulse',
     category: 'fullstack',
     image: './assets/project-thumbnails/optimized/property-pulse.webp',
@@ -57,7 +57,7 @@ const projects = [
     repoLink: 'https://github.com/Sreenivasulu-Kalluru/property-pulse',
   },
   {
-    id: 4,
+    id: 3,
     title: 'Streamify',
     category: 'fullstack',
     image: './assets/project-thumbnails/optimized/streamify.webp',
@@ -72,7 +72,7 @@ const projects = [
   },
 
   {
-    id: 6,
+    id: 4,
     title: 'Proshop',
     category: 'fullstack',
     image: './assets/project-thumbnails/optimized/proshop-mern.webp',
@@ -88,7 +88,7 @@ const projects = [
     repoLink: 'https://github.com/Sreenivasulu-Kalluru/proshop-mern',
   },
   {
-    id: 7,
+    id: 5,
     title: 'Campus Book Exchange',
     category: 'fullstack',
     image: './assets/project-thumbnails/optimized/campus-book-ex.webp',
@@ -105,7 +105,7 @@ const projects = [
     repoLink: 'https://github.com/Sreenivasulu-Kalluru/campus-book-exchange',
   },
   {
-    id: 8,
+    id: 6,
     title: 'SVU MCA Alumni Portal',
     category: 'fullstack',
     image: './assets/project-thumbnails/optimized/svu-mca-alumni.webp',

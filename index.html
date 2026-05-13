@@ -24,6 +24,7 @@
       content="Explore the portfolio of Vasu K, featuring modern web development projects and digital experiences."
     />
     <meta property="og:image" content="./assets/images/og-preview.png" />
+    <meta property="og:url" content="https://vasu-me.netlify.app/" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -36,6 +37,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="canonical" href="https://vasu-me.netlify.app/" />
 
     <!-- Fonts (preconnect + swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,6 +74,20 @@
       crossorigin="anonymous"
       defer
     ></script>
+
+    <!-- Prevent dark-mode flash: runs before CSS paints the page -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('theme') === 'dark') {
+            var s = document.createElement('style');
+            s.id = 'theme-init';
+            s.textContent = 'html{background:#0f0f0f}body{background-color:#0f0f0f!important;color:#f9fafb!important}';
+            document.head.appendChild(s);
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <!-- Skip to Content (Accessibility) -->
@@ -154,7 +170,7 @@
       </article>
 
       <!-- Tech Stack (Full Width) -->
-      <article class="card col-span-12" data-aos="fade-up" id="skills" data-tilt data-tilt-max="2" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+      <article class="card col-span-12" data-aos="fade-up" id="skills">
         <h3>My Tech Stack</h3>
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -412,8 +428,8 @@
           pauseOnMouseEnter: false,
         },
         allowTouchMove: false,
-        loopedSlides: 8,
-        loopAdditionalSlides: 10,
+        loopedSlides: 11,
+        loopAdditionalSlides: 3,
         breakpoints: {
           640: { slidesPerView: 4 },
           768: { slidesPerView: 5 },
