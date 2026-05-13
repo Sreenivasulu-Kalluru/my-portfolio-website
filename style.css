@@ -651,6 +651,18 @@ header.container {
   letter-spacing: 0.05em;
 }
 
+/* Visit counter loading pulse */
+.count-loading {
+  display: inline-block;
+  animation: count-pulse 1.2s ease-in-out infinite;
+  color: var(--text-tertiary);
+}
+
+@keyframes count-pulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1;   }
+}
+
 /* --- Focus List --- */
 .focus-list {
   display: flex;

@@ -384,3 +384,65 @@ const projectCountEl = document.getElementById('project-count-val');
 if (projectCountEl) {
   projectCountEl.innerText = `${projects.length}+`;
 }
+
+// * VISIT COUNTER (CounterAPI — counterapi.dev)
+// Uses sessionStorage so page refreshes in the same tab don't double-count.
+const visitCountEl = document.getElementById('visit-count-val');
+const visitCountStat = document.getElementById('visit-count-stat');
+
+if (visitCountEl && visitCountStat) {
+  const NAMESPACE = 'vasu-me-portfolio';
+  const KEY = 'visits';
+
+  // AbortController gives a 5-second timeout so a slow API never hangs the page
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+  const alreadyCounted = sessionStorage.getItem('visitCounted');
+  // /up  → increments by 1 and returns the new count
+  // /get → read-only, returns the current count
+  const endpoint = alreadyCounted
+    ? `https://api.counterapi.dev/v1/${NAMESPACE}/${KEY}`
+    : `https://api.counterapi.dev/v1/${NAMESPACE}/${KEY}/up`;
+
+  fetch(endpoint, { signal: controller.signal })
+    .then((res) => {
+      clearTimeout(timeoutId);
+      if (!res.ok) throw new Error('CounterAPI error');
+      return res.json();
+    })
+    .then((data) => {
+      // counterapi.dev returns { count: N }
+      const raw = data.count ?? data.value;
+      if (typeof raw === 'number') {
+        const target = raw;
+        const duration = 1500;
+        const startTime = performance.now();
+
+        const animateCount = (now) => {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+          const current = Math.floor(easedProgress * target);
+          visitCountEl.textContent = current.toLocaleString();
+          if (progress < 1) {
+            requestAnimationFrame(animateCount);
+          } else {
+            visitCountEl.textContent = target.toLocaleString();
+          }
+        };
+
+        requestAnimationFrame(animateCount);
+
+        if (!alreadyCounted) {
+          sessionStorage.setItem('visitCounted', '1');
+        }
+      }
+    })
+    .catch(() => {
+      clearTimeout(timeoutId);
+      // API unavailable — hide the stat block cleanly
+      visitCountStat.style.display = 'none';
+    });
+}
