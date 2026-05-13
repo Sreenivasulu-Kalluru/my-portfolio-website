@@ -1,10 +1,12 @@
 # netlify.toml — Netlify build & function configuration
 
 [build]
-  publish = "."          # root is the publish directory (static site)
+  publish = "."
   functions = "netlify/functions"
 
-# Optional: serve the site locally via `netlify dev`
+[build.environment]
+  NODE_VERSION = "18"
+
 [dev]
   port = 8888
   autoLaunch = false
