@@ -55,19 +55,19 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <link
       rel="stylesheet"
       href="https://unpkg.com/aos@next/dist/aos.css"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <script
       src="https://kit.fontawesome.com/118f9e9755.js"
@@ -82,7 +82,8 @@
           if (localStorage.getItem('theme') === 'dark') {
             var s = document.createElement('style');
             s.id = 'theme-init';
-            s.textContent = 'html{background:#0f0f0f}body{background-color:#0f0f0f!important;color:#f9fafb!important}';
+            s.textContent =
+              'html{background:#0f0f0f}body{background-color:#0f0f0f!important;color:#f9fafb!important}';
             document.head.appendChild(s);
           }
         } catch (e) {}
@@ -103,25 +104,61 @@
         <h4 class="hero-subtitle reveal-text">Hello, I'm Vasu</h4>
         <h1 class="hero-title reveal-text reveal-delay-1">
           Transforming Ideas into <br />
-          <span class="highlight typing-text" aria-live="polite" aria-atomic="true"></span><span class="cursor" aria-hidden="true">|</span>
+          <span
+            class="highlight typing-text"
+            aria-live="polite"
+            aria-atomic="true"
+          ></span
+          ><span class="cursor" aria-hidden="true">|</span>
         </h1>
         <p class="hero-desc reveal-text reveal-delay-2">
-          Full Stack Developer specializing in the MERN stack. I build scalable, high-performance web applications and seamless, user-centric digital experiences.
+          Full Stack Developer specializing in the MERN stack. I build scalable,
+          high-performance web applications and seamless, user-centric digital
+          experiences.
         </p>
         <div class="hero-btns" data-aos="fade-up" data-aos-delay="300">
           <a href="#projects" class="btn btn-primary" title="View my projects"
             >View Work <i class="uil uil-arrow-right" aria-hidden="true"></i
           ></a>
-          <a href="#contact" class="btn btn-secondary" title="Get in touch with me">Contact Me</a>
-          <a href="./assets/Sreenivasulu Kalluru.pdf" class="btn btn-outline" title="Download my resume" download>Download CV <i class="uil uil-file-download" aria-hidden="true"></i></a>
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+            title="Get in touch with me"
+            >Contact Me</a
+          >
+          <a
+            href="./assets/Sreenivasulu Kalluru.pdf"
+            class="btn btn-outline"
+            title="Download my resume"
+            download
+            >Download CV <i class="uil uil-file-download" aria-hidden="true"></i
+          ></a>
         </div>
         <div class="hero-socials" data-aos="fade-up" data-aos-delay="400">
-          <a href="https://github.com/Sreenivasulu-Kalluru" target="_blank" rel="noopener noreferrer" class="btn btn-outline sm" aria-label="GitHub"><i class="uil uil-github" aria-hidden="true"></i> GitHub</a>
-          <a href="https://linkedin.com/in/vasuk24" target="_blank" rel="noopener noreferrer" class="btn btn-outline sm" aria-label="LinkedIn"><i class="uil uil-linkedin" aria-hidden="true"></i> LinkedIn</a>
+          <a
+            href="https://github.com/Sreenivasulu-Kalluru"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline sm"
+            aria-label="GitHub"
+            ><i class="uil uil-github" aria-hidden="true"></i> GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/vasuk24"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline sm"
+            aria-label="LinkedIn"
+            ><i class="uil uil-linkedin" aria-hidden="true"></i> LinkedIn</a
+          >
         </div>
       </div>
       <div class="scroll-down" aria-hidden="true">
-        <a href="#about" aria-label="Scroll down to About section" tabindex="-1">
+        <a
+          href="#about"
+          aria-label="Scroll down to About section"
+          tabindex="-1"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -130,196 +167,385 @@
     </header>
 
     <main>
-
-    <!-- Bento Grid Section -->
-    <section id="about" class="container bento-grid">
-      <!-- About Card (Large) -->
-      <article class="card card-lg col-span-8" data-aos="fade-up" data-tilt data-tilt-max="2" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
-        <h3>About Me</h3>
-        <p>
-          I am a skilled MERN stack developer with a passion for crafting
-          intuitive, responsive, and dynamic web applications. Specializing in
-          front-end development, I combine expertise in React.js with robust
-          back-end experience in Node.js, Express, and MongoDB.
-        </p>
-        <div class="stats-grid">
-          <div class="stat-item">
-            <h2 id="project-count-val">20+</h2>
-            <small>Projects Completed</small>
-          </div>
-          <div class="stat-item">
-            <h2>1+</h2>
-            <small>Years Experience</small>
-          </div>
-          <div class="stat-item" id="visit-count-stat">
-            <h2 id="visit-count-val"><span class="count-loading">—</span></h2>
-            <small>Total Visits</small>
-          </div>
-        </div>
-      </article>
-
-      <!-- Services / Focus (Side) -->
-      <article class="card col-span-4" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
-        <h3>Focus</h3>
-        <ul class="focus-list">
-          <li><i class="uil uil-desktop" aria-hidden="true"></i> Frontend Dev</li>
-          <li><i class="uil uil-server" aria-hidden="true"></i> Backend Dev</li>
-          <li><i class="uil uil-circuit" aria-hidden="true"></i> DevOps</li>
-          <li><i class="uil uil-window" aria-hidden="true"></i> UI/UX Design</li>
-        </ul>
-      </article>
-
-      <!-- Tech Stack (Full Width) -->
-      <article class="card col-span-12" data-aos="fade-up" id="skills">
-        <h3>My Tech Stack</h3>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <!-- Swiper items from original HTML -->
-            <div class="swiper-slide">
-              <img src="./assets/technologies/html-5.png" alt="HTML" width="40" height="40" loading="lazy" />
-              <h3>HTML</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/css.png" alt="CSS" width="40" height="40" loading="lazy" />
-              <h3>CSS</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/javascript.png" alt="JavaScript" width="40" height="40" loading="lazy" />
-              <h3>JavaScript</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/typescript.png" alt="TypeScript" width="40" height="40" loading="lazy" />
-              <h3>TypeScript</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/react.png" alt="React" width="40" height="40" loading="lazy" />
-              <h3>React</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/redux.png" alt="Redux" width="40" height="40" loading="lazy" />
-              <h3>Redux</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/tailwind-css.png" alt="Tailwind CSS" width="40" height="40" loading="lazy" />
-              <h3>Tailwind CSS</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/nextjs-13.svg" alt="Next.js" width="40" height="40" loading="lazy" />
-              <h3>Next.js</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/node-js.png" alt="Node.js" width="40" height="40" loading="lazy" />
-              <h3>Node.js</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/express.png" alt="Express.js" width="40" height="40" loading="lazy" />
-              <h3>Express.js</h3>
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/technologies/mongodb.png" alt="MongoDB" width="40" height="40" loading="lazy" />
-              <h3>MongoDB</h3>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="container section-projects" id="projects">
-      <div
-        class="section-header"
-        style="
-          justify-content: center;
-          border-bottom: none;
-          margin-bottom: 2rem;
-        "
-      >
-        <h2>Featured Projects</h2>
-      </div>
-
-      <!-- Projects Grid (Injected by JS) -->
-      <div class="projects__container">
-        <!-- Rendered via index.js -->
-      </div>
-    </section>
-
-    <!-- Experience / Education & Contact Section -->
-    <section class="container bento-grid" style="padding-top: 0">
-      <!-- Experience / Education -->
-      <article class="card col-span-6" data-aos="fade-up" id="education" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
-        <h3>Education</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <h4>Master's Degree - MCA</h4>
-            <small>SV University | 2024 - 2026</small>
-          </div>
-          <div class="timeline-item">
-            <h4>Bachelor's Degree - BSc</h4>
-            <small>SBVR Degree College | 2019 - 2022</small>
-          </div>
-          <div class="timeline-item">
-            <h4>Intermediate - MPC</h4>
-            <small>Sri Chaitanya Jr College | 2017 - 2019</small>
-          </div>
-          <div class="timeline-item">
-            <h4>SSC</h4>
-            <small>ZPHS Kamalakuru | 2016 - 2017</small>
-          </div>
-        </div>
-      </article>
-
-      <!-- Connect / Contact -->
-      <article class="card col-span-6" data-aos="fade-up" id="contact" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
-        <h3>Let's Connect</h3>
-        <p class="contact-desc" style="margin-bottom: 1.5rem;">
-          Open for freelance opportunities and full-time roles.
-        </p>
-
-        <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-          <div style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.5rem 1rem; border-radius: var(--radius-sm); border: 1px solid rgba(16, 185, 129, 0.2); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 500; width: fit-content;">
-            <span style="display: inline-block; width: 8px; height: 8px; background-color: #10b981; border-radius: 50%; box-shadow: 0 0 0 2px rgba(16,185,129,0.2);"></span>
-            Available for roles
-          </div>
-          <a href="mailto:vaasuk24@gmail.com" class="btn btn-outline" style="justify-content: flex-start;"><i class="uil uil-envelope" aria-hidden="true"></i> vaasuk24@gmail.com</a>
-          <div style="display: flex; gap: 1rem;">
-            <a href="https://github.com/Sreenivasulu-Kalluru" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="flex: 1;"><i class="uil uil-github" aria-hidden="true"></i> GitHub</a>
-            <a href="https://linkedin.com/in/vasuk24" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="flex: 1;"><i class="uil uil-linkedin" aria-hidden="true"></i> LinkedIn</a>
-          </div>
-        </div>
-        <form
-          action="https://formspree.io/f/xjggevbl"
-          method="POST"
-          class="contact-form"
-          id="contact-form"
+      <!-- Bento Grid Section -->
+      <section id="about" class="container bento-grid">
+        <!-- About Card (Large) -->
+        <article
+          class="card card-lg col-span-8"
+          data-aos="fade-up"
+          data-tilt
+          data-tilt-max="2"
+          data-tilt-speed="400"
+          data-tilt-glare
+          data-tilt-max-glare="0.1"
         >
-          <div class="form-group">
-            <label for="contact-name" class="sr-only">Full Name</label>
-            <input type="text" id="contact-name" name="name" placeholder="Full Name" required autocomplete="name" />
-            <label for="contact-email" class="sr-only">Email Address</label>
-            <input type="email" id="contact-email" name="email" placeholder="Email Address" required autocomplete="email" />
+          <h3>About Me</h3>
+          <p>
+            I am a skilled MERN stack developer with a passion for crafting
+            intuitive, responsive, and dynamic web applications. Specializing in
+            front-end development, I combine expertise in React.js with robust
+            back-end experience in Node.js, Express, and MongoDB.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h2 id="project-count-val">20+</h2>
+              <small>Projects Completed</small>
+            </div>
+            <div class="stat-item">
+              <h2>0+</h2>
+              <small>Years Experience</small>
+            </div>
+            <div class="stat-item" id="visit-count-stat">
+              <h2 id="visit-count-val"><span class="count-loading">—</span></h2>
+              <small>Total Visits</small>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="contact-phone" class="sr-only">Phone Number</label>
-            <input type="tel" id="contact-phone" name="phone" placeholder="Phone Number" autocomplete="tel" />
-            <label for="contact-subject" class="sr-only">Subject</label>
-            <input type="text" id="contact-subject" name="subject" placeholder="Subject" required />
-          </div>
-          <label for="contact-message" class="sr-only">Your Message</label>
-          <textarea
-            id="contact-message"
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit" class="btn btn-primary full-width" title="Send your message">
-            Send Message
-          </button>
-        </form>
-        <div id="form-status" role="status" aria-live="polite" style="margin-top: 1rem; display: none"></div>
-      </article>
-    </section>
+        </article>
 
+        <!-- Services / Focus (Side) -->
+        <article
+          class="card col-span-4"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-tilt
+          data-tilt-max="5"
+          data-tilt-speed="400"
+          data-tilt-glare
+          data-tilt-max-glare="0.2"
+        >
+          <h3>Focus</h3>
+          <ul class="focus-list">
+            <li>
+              <i class="uil uil-desktop" aria-hidden="true"></i> Frontend Dev
+            </li>
+            <li>
+              <i class="uil uil-server" aria-hidden="true"></i> Backend Dev
+            </li>
+            <li><i class="uil uil-circuit" aria-hidden="true"></i> DevOps</li>
+            <li>
+              <i class="uil uil-window" aria-hidden="true"></i> UI/UX Design
+            </li>
+          </ul>
+        </article>
+
+        <!-- Tech Stack (Full Width) -->
+        <article class="card col-span-12" data-aos="fade-up" id="skills">
+          <h3>My Tech Stack</h3>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Swiper items from original HTML -->
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/html-5.png"
+                  alt="HTML"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>HTML</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/css.png"
+                  alt="CSS"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>CSS</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/javascript.png"
+                  alt="JavaScript"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>JavaScript</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/typescript.png"
+                  alt="TypeScript"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>TypeScript</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/react.png"
+                  alt="React"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>React</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/redux.png"
+                  alt="Redux"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>Redux</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/tailwind-css.png"
+                  alt="Tailwind CSS"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>Tailwind CSS</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/nextjs-13.svg"
+                  alt="Next.js"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>Next.js</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/node-js.png"
+                  alt="Node.js"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>Node.js</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/express.png"
+                  alt="Express.js"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>Express.js</h3>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./assets/technologies/mongodb.png"
+                  alt="MongoDB"
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                />
+                <h3>MongoDB</h3>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="container section-projects" id="projects">
+        <div
+          class="section-header"
+          style="
+            justify-content: center;
+            border-bottom: none;
+            margin-bottom: 2rem;
+          "
+        >
+          <h2>Featured Projects</h2>
+        </div>
+
+        <!-- Projects Grid (Injected by JS) -->
+        <div class="projects__container">
+          <!-- Rendered via index.js -->
+        </div>
+      </section>
+
+      <!-- Experience / Education & Contact Section -->
+      <section class="container bento-grid" style="padding-top: 0">
+        <!-- Experience / Education -->
+        <article
+          class="card col-span-6"
+          data-aos="fade-up"
+          id="education"
+          data-tilt
+          data-tilt-max="3"
+          data-tilt-speed="400"
+          data-tilt-glare
+          data-tilt-max-glare="0.1"
+        >
+          <h3>Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Master's Degree - MCA</h4>
+              <small>SV University | 2024 - 2026</small>
+            </div>
+            <div class="timeline-item">
+              <h4>Bachelor's Degree - BSc</h4>
+              <small>SBVR Degree College | 2019 - 2022</small>
+            </div>
+            <div class="timeline-item">
+              <h4>Intermediate - MPC</h4>
+              <small>Sri Chaitanya Jr College | 2017 - 2019</small>
+            </div>
+            <div class="timeline-item">
+              <h4>SSC</h4>
+              <small>ZPHS Kamalakuru | 2016 - 2017</small>
+            </div>
+          </div>
+        </article>
+
+        <!-- Connect / Contact -->
+        <article
+          class="card col-span-6"
+          data-aos="fade-up"
+          id="contact"
+          data-tilt
+          data-tilt-max="3"
+          data-tilt-speed="400"
+          data-tilt-glare
+          data-tilt-max-glare="0.1"
+        >
+          <h3>Let's Connect</h3>
+          <p class="contact-desc" style="margin-bottom: 1.5rem">
+            Open for freelance opportunities and full-time roles.
+          </p>
+
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              margin-bottom: 2rem;
+            "
+          >
+            <div
+              style="
+                background: rgba(16, 185, 129, 0.1);
+                color: #10b981;
+                padding: 0.5rem 1rem;
+                border-radius: var(--radius-sm);
+                border: 1px solid rgba(16, 185, 129, 0.2);
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-weight: 500;
+                width: fit-content;
+              "
+            >
+              <span
+                style="
+                  display: inline-block;
+                  width: 8px;
+                  height: 8px;
+                  background-color: #10b981;
+                  border-radius: 50%;
+                  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+                "
+              ></span>
+              Available for roles
+            </div>
+            <a
+              href="mailto:vaasuk24@gmail.com"
+              class="btn btn-outline"
+              style="justify-content: flex-start"
+              ><i class="uil uil-envelope" aria-hidden="true"></i>
+              vaasuk24@gmail.com</a
+            >
+            <div style="display: flex; gap: 1rem">
+              <a
+                href="https://github.com/Sreenivasulu-Kalluru"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+                style="flex: 1"
+                ><i class="uil uil-github" aria-hidden="true"></i> GitHub</a
+              >
+              <a
+                href="https://linkedin.com/in/vasuk24"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+                style="flex: 1"
+                ><i class="uil uil-linkedin" aria-hidden="true"></i> LinkedIn</a
+              >
+            </div>
+          </div>
+          <form
+            action="https://formspree.io/f/xjggevbl"
+            method="POST"
+            class="contact-form"
+            id="contact-form"
+          >
+            <div class="form-group">
+              <label for="contact-name" class="sr-only">Full Name</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Full Name"
+                required
+                autocomplete="name"
+              />
+              <label for="contact-email" class="sr-only">Email Address</label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                placeholder="Email Address"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="contact-phone" class="sr-only">Phone Number</label>
+              <input
+                type="tel"
+                id="contact-phone"
+                name="phone"
+                placeholder="Phone Number"
+                autocomplete="tel"
+              />
+              <label for="contact-subject" class="sr-only">Subject</label>
+              <input
+                type="text"
+                id="contact-subject"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <label for="contact-message" class="sr-only">Your Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="btn btn-primary full-width"
+              title="Send your message"
+            >
+              Send Message
+            </button>
+          </form>
+          <div
+            id="form-status"
+            role="status"
+            aria-live="polite"
+            style="margin-top: 1rem; display: none"
+          ></div>
+        </article>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -367,14 +593,23 @@
         <p>
           &copy; <span id="copyright-year"></span> Vasu K. All rights reserved.
         </p>
-        <p>Made with <i class="uil uil-heart text-gradient" aria-hidden="true"></i><span class="sr-only"> love</span></p>
+        <p>
+          Made with
+          <i class="uil uil-heart text-gradient" aria-hidden="true"></i
+          ><span class="sr-only"> love</span>
+        </p>
       </div>
     </footer>
 
     <!-- Back to Top -->
     <button class="back-to-top" aria-label="Back to Top" title="Back to Top">
-      <svg class="progress-ring" width="100%" height="100%" viewBox="0 0 100 100" aria-hidden="true">
-
+      <svg
+        class="progress-ring"
+        width="100%"
+        height="100%"
+        viewBox="0 0 100 100"
+        aria-hidden="true"
+      >
         <!-- Progress Indicator -->
         <circle
           class="progress-ring__circle"
@@ -391,16 +626,35 @@
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <a href="#" class="nav__logo">Vasu K.</a>
       <div class="nav__menu" id="nav-menu" role="menubar">
-        <a href="#about" role="menuitem"><i class="uil uil-user" aria-hidden="true"></i> About</a>
-        <a href="#skills" role="menuitem"><i class="uil uil-brackets-curly" aria-hidden="true"></i> Skills</a>
-        <a href="#projects" role="menuitem"><i class="uil uil-briefcase-alt" aria-hidden="true"></i> Work</a>
-        <a href="#contact" role="menuitem"><i class="uil uil-envelope" aria-hidden="true"></i> Contact</a>
+        <a href="#about" role="menuitem"
+          ><i class="uil uil-user" aria-hidden="true"></i> About</a
+        >
+        <a href="#skills" role="menuitem"
+          ><i class="uil uil-brackets-curly" aria-hidden="true"></i> Skills</a
+        >
+        <a href="#projects" role="menuitem"
+          ><i class="uil uil-briefcase-alt" aria-hidden="true"></i> Work</a
+        >
+        <a href="#contact" role="menuitem"
+          ><i class="uil uil-envelope" aria-hidden="true"></i> Contact</a
+        >
       </div>
       <div class="nav__buttons">
-        <button class="nav__theme-btn" aria-label="Toggle Theme" title="Toggle Theme">
+        <button
+          class="nav__theme-btn"
+          aria-label="Toggle Theme"
+          title="Toggle Theme"
+        >
           <i class="uil uil-moon" aria-hidden="true"></i>
         </button>
-        <button id="menu-btn" class="nav__toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu" title="Toggle Menu">
+        <button
+          id="menu-btn"
+          class="nav__toggle"
+          aria-label="Toggle Menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          title="Toggle Menu"
+        >
           <div class="hamburger">
             <span></span>
             <span></span>
