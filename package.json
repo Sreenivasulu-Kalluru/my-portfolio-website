@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Sreenivasulu-Kalluru/my-portfolio-website#readme",
   "dependencies": {
+    "@netlify/blobs": "^10.7.5",
     "sharp": "^0.34.5"
   }
 }
