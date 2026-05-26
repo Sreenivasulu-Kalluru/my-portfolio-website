@@ -37,9 +37,12 @@ body.dark-mode {
 
   --text-primary: #f9fafb;
   --text-secondary: #d1d5db;
-  --text-tertiary: #6b7280;
+  --text-tertiary: #9ca3af;
 
   --border-color: #262626;
+  
+  --accent-color: #60a5fa; /* Lighter Blue for better contrast in dark mode */
+  --accent-hover: #93c5fd;
 }
 
 /* --- Accessibility Utilities --- */

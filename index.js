@@ -252,6 +252,12 @@ window.addEventListener('load', () => {
     document.body.classList.remove('dark-mode');
     if (themeBtn) themeBtn.innerHTML = '<i class="uil uil-moon" aria-hidden="true"></i>';
   }
+  
+  // Remove the anti-flash inline style to allow CSS variables to work properly
+  const themeInit = document.getElementById('theme-init');
+  if (themeInit) {
+    themeInit.remove();
+  }
 });
 
 // * Custom Mouse Cursor
