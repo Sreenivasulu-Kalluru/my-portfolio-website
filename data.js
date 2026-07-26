@@ -27,6 +27,19 @@ const servicesData = [
 
 const projects = [
   {
+    id: 7,
+    title: 'Roots & Heritage',
+    category: 'fullstack',
+    image: './assets/project-thumbnails/optimized/roots-and-heritage.png',
+    description: 'A private, interactive digital home to preserve ancestry, heirloom recipes, rich biographies, and cherished memories.',
+    techStack: ['React', 'Node.js', 'Express', 'MongoDB'],
+    keyFeatures: ['Interactive Family Space', 'Heirloom Preservation', 'Secure Digital Home'],
+    impact: 'Built a comprehensive digital heirloom platform for families to document and share their legacy across generations.',
+    responsive: true,
+    demoLink: 'https://www.rootsandheritage.app',
+    repoLink: '',
+  },
+  {
     id: 1,
     title: 'OmniFood',
     category: 'html-css-javascript',
